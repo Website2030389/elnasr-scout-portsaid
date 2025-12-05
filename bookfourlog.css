@@ -1,0 +1,53 @@
+  .backdrop-dim {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+    display: none;
+  }
+  dialog {
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    width: min(420px, 92%);
+    background: #ffffff53;
+    text-align: center;
+    z-index: 10;
+    animation: popup .35s ease;
+  }
+  @keyframes popup {
+    from { transform: scale(0.9); opacity:0 }
+    to { transform: scale(1); opacity:1 }
+  }
+  h1 { color:#E51A1A; margin-bottom:10px; font-size: 50px; }
+  p { color:#fbfafa; margin-bottom:20px }
+  .field {
+    text-align:right;
+    margin: 10px 0;
+    display:flex;
+    flex-direction:column;
+  }
+  label { font-weight:600; margin-bottom:5px;     color:white; }
+  input {
+    padding:10px 12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    background-color: rgba(240, 248, 255, 0.409);
+  }
+  input:focus { outline:none; border-color:#E51A1A; }
+  button {
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#E51A1A;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition: background .3s;
+  }
+  button:hover { background:#ffffff44; }
+  .show-dim { display:block; }

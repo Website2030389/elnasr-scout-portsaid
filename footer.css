@@ -1,0 +1,482 @@
+.s6 {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.main-footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  padding: 60px 0 0;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 40px;
+
+
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #00e5ff;
+  right: 25px;
+
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  right: 25px;
+
+
+}
+
+.footer-column ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #00e5ff;
+  padding-right: 5px;
+}
+
+.contact-column .social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  right: 55px;
+
+}
+
+.contact-column .social-icons a {
+  color: #00e5ff;
+  font-size: 22px;
+  transition: 0.3s;
+
+}
+
+.contact-column .social-icons a:hover {
+  color: #fff;
+}
+
+#contact {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+.footer-map {
+  background: #111;
+  padding: 50px;
+  text-align: center;
+  border-top: 1px solid #222;
+  margin-top: 20px;
+  width: 100%;
+  margin: 0;
+  height: 100vh;
+  background-color: #121212;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.footer-map p {
+  color: #aaa;
+}
+
+.footer-bottom {
+  background: #000;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #222;
+  width: 100%;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.earth {
+  width: 250px;
+  height: 250px;
+  margin-right: 35px;
+  border-radius: 50%;
+  background: url("imgCurricula/earth-png-25613.png") no-repeat center/cover;
+  animation: spin 70s linear infinite;
+  cursor: pointer;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+  .s6 {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    padding: 30px 0 0;
+    direction: rtl;
+    font-family: "Cairo", sans-serif;
+    width: 100%;
+
+
+
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+  }
+
+
+  .footer-column h3 {
+    right: 25px;
+    font-size: 14px;
+    color: #00e5ff;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    right: 50px;
+
+  }
+
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+
+  }
+
+  .footer-column ul li a:hover {
+    color: #00e5ff;
+
+  }
+
+  .contact-column .social-icons {
+    position: relative;
+    display: flex;
+    gap: 15px;
+
+    right: 10px;
+
+  }
+
+  .contact-column .social-icons a {
+    color: #00e5ff;
+    font-size: 22px;
+    transition: 0.3s;
+
+  }
+
+  .contact-column .social-icons a:hover {
+    color: #fff;
+  }
+
+  .footer-map {
+    background: #111;
+    padding: 50px;
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 20px;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    background-color: #121212;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .footer-map p {
+    color: #aaa;
+  }
+
+  .footer-bottom {
+    background: #000;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #222;
+    width: 100%;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+  }
+
+
+  .earth {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: url("imgCurricula/earth-png-25613.png") no-repeat center/cover;
+    animation: spin 70s linear infinite;
+    cursor: pointer;
+    animation-direction: alternate-reverse;
+    margin-right: 1px;
+
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .contact-phone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .s6 {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-footer {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #fff;
+    padding: 30px 0 0;
+    direction: rtl;
+    font-family: "Cairo", sans-serif;
+    width: 100%;
+
+
+
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+
+
+  }
+
+
+  .footer-column h3 {
+    right: 25px;
+
+    font-size: 18px;
+    color: #00e5ff;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    left: 65px;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+
+  }
+
+  .footer-column ul li a:hover {
+    color: #00e5ff;
+
+  }
+
+  .contact-column {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* علشان لو المكان ضاق، ينزلوا سطر تاني */
+    gap: 25px;
+    text-align: center;
+  }
+
+  .contact-column .social-icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+    margin-left: 100px;
+
+
+  }
+
+  .contact-column .social-icons a {
+    color: #00e5ff;
+    font-size: 22px;
+    transition: 0.3s;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .contact-column .social-icons a:hover {
+    color: #fff;
+  }
+
+  .footer-map {
+    background: #111;
+
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 20px;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    background-color: #121212;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .footer-map p {
+    color: #aaa;
+  }
+
+  .footer-bottom {
+    background: #000;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #222;
+    width: 100%;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+  }
+
+
+  .earth {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: url("imgCurricula/earth-png-25613.png") no-repeat center/cover;
+    animation: spin 70s linear infinite;
+    cursor: pointer;
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+}

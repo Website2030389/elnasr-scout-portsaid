@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>استفسارات</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="astfsar.css">
+</head>
+<body>
+<div class="gf-card" id="gfCard">
+  <div class="gf-head">
+    <div class="gf-badge">✉️</div>
+    <div>
+      <div class="gf-title">سجّل بريدك واطرح سؤالك</div>
+      <div class="gf-sub">نستلم الرسالة ونرد عليك مباشرة   </div>
+    </div>
+  </div>
+
+  <!-- form: غيّر قيم entry.X تحت لتطابق نموذجك -->
+  <form id="customGF" method="POST" target="hidden_iframe"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSdX51XN4LDN81GLcYnZIPKuq739qvLxz8ruRutCgnJpIuDfOg/formResponse"
+        onsubmit="return submitGF(event)" class="gf-form" autocomplete="email">
+    
+    <!-- HONEYPOT: bot catcher -->
+    <input type="text" name="contact_me_leave_blank" class="hp" tabindex="-1" autocomplete="off">
+
+    <!-- Email field — CHANGE entry.ENTER_EMAIL_ID -->
+    <input class="gf-input" id="gfEmail" name="entry.279559032" type="email"
+           placeholder="بريدك الإلكتروني (مثال: you@gmail.com)" required>
+
+    <!-- Message field — CHANGE entry.2052981733 -->
+    <textarea class="gf-textarea" id="gfMessage" name="entry.2052981733"
+              placeholder="اكتب سؤالك أو استفسارك..." required></textarea>
+
+    <!-- optional hidden field: page URL -->
+    <input type="hidden" name="entry.PAGE_URL" id="pageUrl">
+
+    <div class="gf-actions">
+      <div class="gf-inline">نحن نقدر خصوصيتك • لن نشارك بياناتك</div>
+      <button class="gf-btn" id="sendBtn" type="submit">أرسل</button>
+    </div>
+  </form>
+
+  <div class="gf-success" id="gfSuccess">✅ شكراً! تم استلام استفسارك — سنرد على بريدك قريبًا.</div>
+</div>
+
+<!-- hidden iframe for silent submission -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<script>
+  // put current page url (optional analytics) — change entry.PAGE_URL to your real entry id or remove
+  document.getElementById('pageUrl').value = window.location.href;
+
+  // basic email regex validator
+  function isValidEmail(email){
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function submitGF(e){
+    e.preventDefault();
+    const hp = document.querySelector('input[name="contact_me_leave_blank"]');
+    if (hp && hp.value) {
+      // bot detected — silently fail
+      return false;
+    }
+
+    const email = document.getElementById('gfEmail').value.trim();
+    const msg = document.getElementById('gfMessage').value.trim();
+    if (!isValidEmail(email)) {
+      alert('من فضلك اكتب بريد إلكتروني صحيح.');
+      return false;
+    }
+    if (msg.length < 4) {
+      alert('رجاء اكتب رسالة أقصر من 4 أحرف على الأقل.');
+      return false;
+    }
+
+    // visual feedback
+    const form = document.getElementById('customGF');
+    const btn = document.getElementById('sendBtn');
+    btn.disabled = true;
+    btn.textContent = 'جارٍ الإرسال...';
+
+    // submit to hidden iframe (will not redirect the page)
+    form.submit();
+
+    // show success after a short delay (Google may take a moment)
+    setTimeout(() => {
+      form.style.display = 'none';
+      const succ = document.getElementById('gfSuccess');
+      succ.style.display = 'block';
+    }, 900);
+
+    return false; // prevent default double submit
+  }
+</script>
+
+</body>
+</html>
+

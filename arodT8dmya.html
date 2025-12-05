@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LorAurora Security</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="arod.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">Special for leaders</div>
+    <nav>
+      <a href="#features">Presentations</a>
+      <a href="#mission">The Scout Spirit</a>
+      <a href="#contact">Inquiries</a>
+      <span class="toggle-theme" onclick="toggleTheme()">🌓</span>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>عروض تقدمية</h1>
+    <p>Progressive offers</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Your inquiry</button>
+  </section>
+
+  <!-- === Features Section === -->
+  <section class="section" id="features">
+    <h2 data-aos="fade-up">Presentations</h2>
+    <div class="features">
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-right">
+        <h3>عروض تقدمية</h3>
+      </a>
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-up">
+        <h3>عروض تقدمية</h3>
+      </a>
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-left">
+        <h3>عروض تقدمية</h3>
+      </a>
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-right">
+        <h3>عروض تقدمية</h3>
+      </a>
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-up">
+        <h3>عروض تقدمية</h3>
+      </a>
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-left">
+        <h3>عروض تقدمية</h3>
+      </a>
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-up">
+        <h3>عروض تقدمية</h3>
+      </a>
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-up">
+        <h3>عروض تقدمية</h3>
+      </a>
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-up">
+        <h3>عروض تقدمية</h3>
+      </a>
+      <a href="https://drive.google.com/" target="_blank" class="feature" data-aos="fade-up">
+        <h3>عروض تقدمية</h3>
+      </a>
+    </div>
+  </section>
+  <!-- ✅ رسالة منبثقة تظهر فوق الصفحة -->
+  <div id="popupMsg" class="popup-msg">
+    <div class="popup-content">
+      <p>❗ لا يوجد عروض تقديمية حاليًا</p>
+      <button id="closePopup">إغلاق</button>
+    </div>
+  </div>
+
+  <!-- === Mission Section === -->
+  <section class="section" id="mission">
+    <h2 data-aos="fade-up">روح الكشافة – The Scout Spirit</h2>
+    <p data-aos="fade-up">
+      الكشافة تمنح الشباب فرصة لتعلم القيادة والتعاون ومواجهة التحديات بشجاعة. هي مدرسة الحياة التي تجمع بين التعلم
+      المرح والمسؤولية الحقيقية.
+  </section>
+
+  <!-- === Contact Section (Redirect to inquiry) === -->
+  <section class="cta" id="contact">
+    <h2>Write your inquiry</h2>
+    <p>الاستفسارات</p>
+    <button class="astfsar" onclick="window.location.href='astfsarat.html'">مشكلة أو استفسار</button>
+  </section>
+
+  <footer>
+    &copy; عروض تقدمية للقادة
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+    function toggleTheme() { document.body.classList.toggle('light'); }
+    document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
+  </script>
+  <script>
+    // إظهار الرسالة عند الضغط على أي رابط
+    document.querySelectorAll('.features .feature').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('popupMsg').style.display = 'flex';
+      });
+    });
+
+    // إغلاق الرسالة
+    document.getElementById('closePopup').addEventListener('click', () => {
+      document.getElementById('popupMsg').style.display = 'none';
+    });
+
+    // إغلاق عند الضغط خارج المربع
+    document.getElementById('popupMsg').addEventListener('click', e => {
+      if (e.target.id === 'popupMsg') {
+        document.getElementById('popupMsg').style.display = 'none';
+      }
+    });
+  </script>
+</body>
+
+</html>

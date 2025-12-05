@@ -1,0 +1,713 @@
+     /* ----------------------------
+   الأساسيات العامة
+----------------------------- */
+
+     body {
+         width: 100%;
+         height: 100%;
+         font-family: "Cairo", sans-serif;
+         scroll-behavior: smooth;
+         background: linear-gradient(180deg, #0a0a0f, #1c1c24);
+         color: #fff;
+         overflow-x: hidden;
+         margin: 0;
+         padding: 0;
+     }
+
+     /* ----------------------------
+   رأس الصفحة
+----------------------------- */
+     header {
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         background: radial-gradient(circle at center, #0a0a0f 20%, #000);
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+     }
+
+     header h1 {
+         font-size: 3.5em;
+         color: #ffd86b;
+         margin-bottom: 15px;
+     }
+
+     header p {
+         font-size: 1.3em;
+     }
+
+     /* ----------------------------
+   شريط التنقل
+----------------------------- */
+     nav {
+         position: fixed;
+         top: 20px;
+         z-index: 10;
+     }
+
+     nav a {
+         color: #ffd86b;
+         margin-left: 40px;
+         text-decoration: none;
+         font-weight: bold;
+         transition: color 0.3s;
+         cursor: pointer;
+         gap: 30px;
+     }
+
+     nav a:hover {
+         color: #fff;
+     }
+
+     /* ----------------------------
+   الأقسام العامة
+----------------------------- */
+     section {
+         min-height: 100vh;
+         padding: 10px 10%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+
+     h2 {
+         font-size: 2.5em;
+         margin-bottom: 15px;
+         color: #ffd86b;
+     }
+
+     p {
+         font-size: 1.2em;
+         line-height: 1.8;
+         color: #f0f0f0;
+         max-width: 800px;
+         text-align: center;
+     }
+
+     /* ----------------------------
+   الكارت الفاصل
+----------------------------- */
+     .card-section {
+         width: 100%;
+         height: 70vh;
+         margin: 0;
+         padding: 0;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         flex-direction: column;
+     }
+
+     .card {
+         position: relative;
+         display: flex;
+         align-items: center;
+         align-items: center;
+         background: rgba(255, 255, 255, 0.12);
+         border-radius: 20px;
+         padding: 40px 60px;
+         text-align: center;
+         box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+         font-size: 2.5rem;
+         color: #fff;
+         transition: transform 0.3s ease, background 0.3s ease;
+     }
+
+     .card:hover {
+         transform: scale(1.05);
+         background: rgba(255, 255, 255, 0.2);
+     }
+
+     /* ----------------------------
+   قسم الوسائط
+----------------------------- */
+     .media-scroll {
+         display: flex;
+         overflow-x: auto;
+         gap: 40px;
+         padding: 60px 10%;
+         background: #111;
+         border-top: 1px solid #ffd86b22;
+         border-bottom: 1px solid #ffd86b22;
+     }
+
+     .media-item {
+         flex: 0 0 auto;
+         width: 350px;
+         height: 250px;
+         background: #222;
+         border-radius: 12px;
+         overflow: hidden;
+         box-shadow: 0 0 20px #0005;
+         transition: transform 0.3s;
+     }
+
+     .media-item:hover {
+         transform: scale(1.05);
+     }
+
+     .media-item img,
+     .media-item video {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+     }
+
+     /* ----------------------------
+   الفوتر
+----------------------------- */
+     footer {
+         text-align: center;
+         padding: 40px;
+         background: #0a0a0f;
+         font-size: 0.9em;
+         color: #aaa;
+     }
+
+     @media (min-width:300px) and (max-width:600px) {
+
+
+
+         body {
+             position: relative;
+             align-items: center;
+             justify-content: center;
+             flex-direction: column;
+             margin: 0;
+             padding: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             font-family: "Cairo", sans-serif;
+             scroll-behavior: smooth;
+             background: linear-gradient(180deg, #0a0a0f, #1c1c24);
+             color: #fff;
+             /* overflow-x: hidden; */
+         }
+
+         /* ----------------------------
+   رأس الصفحة
+----------------------------- */
+         header {
+             position: relative;
+             height: 50vh;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             text-align: center;
+             background: radial-gradient(circle at center, #0a0a0f 20%, #000);
+         }
+
+         header h1 {
+             font-size: 20px;
+             color: #ffd86b;
+             margin-bottom: 5px;
+         }
+
+         header p {
+             font-size: 1em;
+         }
+
+         /* ----------------------------
+   شريط التنقل
+----------------------------- */
+         nav {
+             position: relative;
+             display: flex;
+             align-items: center;
+             text-align: center;
+             justify-content: center;
+             flex-direction: column;
+             width: 100%;
+             height: auto;
+             top: 1px;
+             z-index: 10;
+             border: 1.1px solid wheat;
+             border-radius: 80px;
+         }
+
+         nav a {
+             color: #ffd86b;
+             margin-left: 1px;
+             text-decoration: none;
+             font-weight: bold;
+             transition: color 0.3s;
+             cursor: pointer;
+             gap: 30px;
+         }
+
+         nav a:hover {
+             color: #fff;
+         }
+
+         /* ----------------------------
+   الأقسام العامة
+----------------------------- */
+         section {
+             min-height: 100vh;
+             /* padding: 10px 10%; */
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+
+         }
+
+         h2 {
+             font-size: 15px;
+             margin-bottom: 15px;
+             color: #ffd86b;
+         }
+
+         p {
+             font-size: 15px;
+             line-height: 1.8;
+             color: #f0f0f0;
+             max-width: 800px;
+             text-align: center;
+         }
+
+         /* ----------------------------
+   الكارت الفاصل
+----------------------------- */
+         .card-section {
+             width: 100%;
+             height: 70vh;
+             margin: 0;
+             padding: 0;
+             position: relative;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             text-align: center;
+             flex-direction: column;
+
+
+
+         }
+
+         .card {
+             position: relative;
+             display: flex;
+             align-items: center;
+             align-items: center;
+             background: rgba(255, 255, 255, 0.12);
+             border-radius: 20px;
+             padding: 40px 60px;
+             text-align: center;
+             box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+             font-size: 1.5rem;
+             color: #fff;
+             transition: transform 0.3s ease, background 0.3s ease;
+         }
+
+         .card:hover {
+             transform: scale(1.05);
+             background: rgba(255, 255, 255, 0.2);
+         }
+
+         /* ----------------------------
+   الفوتر
+----------------------------- */
+         footer {
+             text-align: center;
+             padding: 10px;
+             background: #0a0a0f;
+             font-size: 0.9em;
+             color: #aaa;
+         }
+
+         #mediaSection {
+             margin: 0;
+             padding: 0;
+             right: 0;
+             position: relative;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+             width: 100%;
+             height: 50vh;
+         }
+
+         .media-scroll {
+             position: relative;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+
+         }
+
+         .media-scroll .media-item {
+             width: 100%;
+             height: auto;
+         }
+     }
+
+     @media (min-width:601px) and (max-width:1000px) {
+
+
+
+         body {
+             position: relative;
+             align-items: center;
+             justify-content: center;
+             flex-direction: column;
+             margin: 0;
+             padding: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             font-family: "Cairo", sans-serif;
+             scroll-behavior: smooth;
+             background: linear-gradient(180deg, #0a0a0f, #1c1c24);
+             color: #fff;
+             /* overflow-x: hidden; */
+         }
+
+         /* ----------------------------
+   رأس الصفحة
+----------------------------- */
+         header {
+             position: relative;
+             height: 50vh;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             text-align: center;
+             background: radial-gradient(circle at center, #0a0a0f 20%, #000);
+         }
+
+         header h1 {
+             font-size: 20px;
+             color: #ffd86b;
+             margin-bottom: 5px;
+         }
+
+         header p {
+             font-size: 1em;
+         }
+
+         /* ----------------------------
+   شريط التنقل
+----------------------------- */
+         nav {
+             position: relative;
+             display: flex;
+             align-items: center;
+             text-align: center;
+             justify-content: center;
+             flex-direction: column;
+             width: 100%;
+             height: auto;
+             top: 1px;
+             z-index: 10;
+             border: 1.1px solid wheat;
+             border-radius: 80px;
+         }
+
+         nav a {
+             color: #ffd86b;
+             margin-left: 1px;
+             text-decoration: none;
+             font-weight: bold;
+             transition: color 0.3s;
+             cursor: pointer;
+             gap: 30px;
+         }
+
+         nav a:hover {
+             color: #fff;
+         }
+
+         /* ----------------------------
+   الأقسام العامة
+----------------------------- */
+         section {
+             min-height: 100vh;
+             /* padding: 10px 10%; */
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+
+         }
+
+         h2 {
+             font-size: 15px;
+             margin-bottom: 15px;
+             color: #ffd86b;
+         }
+
+         p {
+             font-size: 15px;
+             line-height: 1.8;
+             color: #f0f0f0;
+             max-width: 800px;
+             text-align: center;
+         }
+
+         /* ----------------------------
+   الكارت الفاصل
+----------------------------- */
+         .card-section {
+             width: 100%;
+             height: 70vh;
+             margin: 0;
+             padding: 0;
+             position: relative;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             text-align: center;
+             flex-direction: column;
+
+
+
+         }
+
+         .card {
+             position: relative;
+             display: flex;
+             align-items: center;
+             align-items: center;
+             background: rgba(255, 255, 255, 0.12);
+             border-radius: 20px;
+             padding: 40px 60px;
+             text-align: center;
+             box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+             font-size: 1.5rem;
+             color: #fff;
+             transition: transform 0.3s ease, background 0.3s ease;
+         }
+
+         .card:hover {
+             transform: scale(1.05);
+             background: rgba(255, 255, 255, 0.2);
+         }
+
+         /* ----------------------------
+   الفوتر
+----------------------------- */
+         footer {
+             text-align: center;
+             padding: 10px;
+             background: #0a0a0f;
+             font-size: 0.9em;
+             color: #aaa;
+         }
+
+         #mediaSection {
+             margin: 0;
+             padding: 0;
+             right: 0;
+             position: relative;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+             width: 100%;
+             height: 50vh;
+         }
+
+         .media-scroll {
+             position: relative;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+
+         }
+
+         .media-scroll .media-item {
+             width: 50%;
+             height: auto;
+         }
+     }
+
+     @media (min-width:1001px) and (max-width:1321px) {
+
+
+
+         body {
+             position: relative;
+             align-items: center;
+             justify-content: center;
+             flex-direction: column;
+             margin: 0;
+             padding: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             font-family: "Cairo", sans-serif;
+             scroll-behavior: smooth;
+             background: linear-gradient(180deg, #0a0a0f, #1c1c24);
+             color: #fff;
+             /* overflow-x: hidden; */
+         }
+
+         /* ----------------------------
+   رأس الصفحة
+----------------------------- */
+         header {
+             position: relative;
+             height: 50vh;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             text-align: center;
+             background: radial-gradient(circle at center, #0a0a0f 20%, #000);
+         }
+
+         header h1 {
+             font-size: 20px;
+             color: #ffd86b;
+             margin-bottom: 5px;
+         }
+
+         header p {
+             font-size: 1em;
+         }
+
+         /* ----------------------------
+   شريط التنقل
+----------------------------- */
+         nav {
+             position: fixed;
+             display: flex;
+             align-items: center;
+             text-align: center;
+             justify-content: space-between;
+             flex-direction: row;
+             background-color: #ffd86b;
+             width: 99.7%;
+             height: auto;
+             top: 0.01px;
+             z-index: 10;
+             border: 1px solid wheat;
+             border-radius: 10px;
+         }
+
+         nav a {
+             color: #000000;
+             margin-left: 1px;
+             text-decoration: none;
+             font-weight: bold;
+             transition: color 0.3s;
+             cursor: pointer;
+             gap: 30px;
+         }
+
+         nav a:hover {
+             color: #fff;
+         }
+
+         /* ----------------------------
+   الأقسام العامة
+----------------------------- */
+         section {
+             min-height: 100vh;
+             /* padding: 10px 10%; */
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+
+         }
+
+         h2 {
+             font-size: 15px;
+             margin-bottom: 15px;
+             color: #ffd86b;
+         }
+
+         p {
+             font-size: 18px;
+             line-height: 1.8;
+             color: #f0f0f0;
+             max-width: 800px;
+             text-align: center;
+         }
+
+         /* ----------------------------
+   الكارت الفاصل
+----------------------------- */
+         .card-section {
+             width: 100%;
+             height: 70vh;
+             margin: 0;
+             padding: 0;
+             position: relative;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             text-align: center;
+             flex-direction: column;
+
+
+
+         }
+
+         .card {
+             position: relative;
+             display: flex;
+             align-items: center;
+             align-items: center;
+             background: rgba(255, 255, 255, 0.12);
+             border-radius: 20px;
+             padding: 40px 60px;
+             text-align: center;
+             box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+             font-size: 1.5rem;
+             color: #fff;
+             transition: transform 0.3s ease, background 0.3s ease;
+         }
+
+         .card:hover {
+             transform: scale(1.05);
+             background: rgba(255, 255, 255, 0.2);
+         }
+
+         /* ----------------------------
+   الفوتر
+----------------------------- */
+         footer {
+             text-align: center;
+             padding: 10px;
+             background: #0a0a0f;
+             font-size: 0.9em;
+             color: #aaa;
+         }
+
+         #mediaSection {
+             margin: 0;
+             padding: 0;
+             right: 0;
+             position: relative;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+             width: 100%;
+             height: 50vh;
+         }
+
+         .media-scroll {
+             position: relative;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+
+         }
+
+         .media-scroll .media-item {
+             width: 50%;
+             height: auto;
+         }
+     }

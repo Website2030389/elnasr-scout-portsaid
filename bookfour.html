@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>كتاب لمرحلة الجوالة</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="bookfour.css">
+    <link rel="stylesheet" href="bookfourlog.css">
+    <!-- googel font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Starting scene -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <!--cover  -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Sans+Bogle&display=swap"
+        rel="stylesheet">
+    <!-- lapel -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Delicious+Handrawn&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 🎬 مشهد البداية -->
+    <div class="intro-scene">
+        <img src="Logo marquee/Untitled-1.png" alt="كتاب طاير">
+        <div class="intro-text"> Leadership </div>
+    </div>
+    <!--  -->
+
+    <div id="backdrop" class="backdrop-dim"></div>
+
+    <dialog id="welcomeDialog">
+        <form id="dataForm">
+            <h1>welcome</h1>
+            <p>برجاء ادخال البيانات المطلوبة</p>
+
+            <div class="field">
+                <label for="nameInput">الاسم</label>
+                <input id="nameInput" name="name" type="text" required placeholder="اكتب اسمك الكامل">
+            </div>
+
+            <div class="field">
+                <label for="ageInput">العمر</label>
+                <input id="ageInput" name="age" type="number" required placeholder="اكتب عمرك">
+            </div>
+
+            <div class="field">
+                <label for="churchInput">اسم الكنيسة</label>
+                <input id="churchInput" name="church" type="text" required placeholder="اكتب اسم كنيستك">
+            </div>
+
+            <button type="submit">موافق</button>
+        </form>
+    </dialog>
+
+    <!--  -->
+    <button class="btn-nav" id="btn-nav"> القائمة</button>
+
+    <div id="tdih-glm-book-1">
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">الرئسية</button>
+            <div class="dropdown-content">
+                <a href="Homescout.html">الرئسية</a>
+                <a href="M.elgwala.html">محاضرات الاشبال</a>
+                <a href="liabarary.html">المكتبة</a>
+                <a href="Homescout.html#school">ابد التعليم</a>
+                <a href="daleleelsharat.html">داليل الشارت </a>
+                <a href="Homescout.html#sct2">من نحن</a>
+            </div>
+        </div>
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">مدخل إلى الكشفية</button>
+            <div class="dropdown-content">
+                <div class="dropdown-content">
+                    <a href="#gallery" data-img="scoutpoy4.png/pag (3).png">مقدمة</a>
+                    <a href="#gallery" data-img="scoutpoy4.png/pag (5).png">بادن باول المؤسس</a>
+                    <a href="#gallery" data-img="scoutpoy4.png/pag (6).png">تواريخ كشفية </a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">مدخل عالم المتقدم</button>
+            <div class="dropdown-content">
+                <a href="#gallery" data-img="scoutpoy4.png/pag (7).png">اساسيات الحركة الكشفية</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (9).png">مسميات المرحلة </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (10).png">الاهداف التربوية لمرحلة الجوالة</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (11).png">وعد و قانون الجوالة</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (12).png">الرهط</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (13).png">ادريات الرهط</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (14).png">الخصائص السنية لمرحلة الجوالة</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (15).png">الاساليب التربوية المناسبة</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (16).png">فائدة معرفة هذا الخصصائص للقائد</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (17).png">جوانب التنمية الشخصية</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (18).png"> المحاور التطبقية التربوية </a>
+
+            </div>
+        </div>
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">اطار مناهج الجوالة</button>
+            <div class="dropdown-content">
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (19).png">شركاء تنمية الجوالة </a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (21).png">دورة حياة المناهج الكشفية العربية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (22).png">فلسفة المناهج الكشفية العربية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (23).png">تعريف المناهج الكشفية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (24).png">أسس بناء المناهج الكشفية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (25).png">قواعد بناء والمبادئ الأساسية</a>
+            </div>
+        </div>
+        <div class="dropdown glowing-hand">
+            <button id="school1" class="dropbtn">مناهج الجوالة</button>
+            <div class="dropdown-content">
+                <a href="#gallery" data-img="scoutpoy4.png/pag (27).png"> الجوانب التربوية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (28).png"> مجالات المنهج</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (29).png"> شكل بيانى للاطار العام للمنهج الكشفى</a>
+                <hr>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (30).png">اهداف مجالات المنهج الكشفى لمرحلة
+                    الجوالة</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (31).png">جوانب المنهج</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (32).png">الجانب الروحى</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (33).png">الجانب العقلى</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (34).png"> الاقتصاد و المواطنة</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (35).png">الجانب الصحى و البدنى</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (36).png">الجانب الاجتماعى</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (37).png">الاتصال العالمى</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (38).png">الجانب الكشغى</a>
+
+            </div>
+        </div>
+        <div class="dropdown glowing-hand">
+            <button id="schooo4" class="dropbtn">النشاطات الفردية والجماعية</button>
+            <div class="dropdown-content">
+
+                <a href="#gallery" data-img="scoutpoy4.png/pag (40).png">الجانب الروحي</a>
+
+                <a href="#gallery" data-img="scoutpoy4.png/pag (41).png">الجانب العقلى</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (42).png">الاهداف الخاصة للجانب العقلى</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (43).png">الاقتصاد المواطنة </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (44).png">الجانب الصحى و البدنى </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (45).png">الجانب الاجتماعى</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (46).png">الخدمة العامة و تنمية المجتمع </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (47).png">الجانب الكشفى </a>
+            </div>
+        </div>
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">النشاطات</button>
+            <div class="dropdown-content">
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (49).png">النشاطات الجماعية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (50).png">برنامج كشفى ف مدة زمنية قصيرة </a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (51).png">فقرة داخل نشاط كامل </a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (52).png">النشاطات الفردية</a>
+
+                <hr>
+                <h3 style="text-align: center; color: blue;">المذكرة التربوية</h3>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (54).png">نموذك المذكرة التربوية</a>
+                <hr>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (55).png">نموذك لمذكرة تربوية </a>
+            </div>
+        </div>
+
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">الطرائق و الاساليب التربوية</button>
+            <div class="dropdown-content">
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (57).png">موصفات الطريقة التربوية الناجحة</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (58).png">الطرئق التربوية المعمدة كشفيا</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (59).png">نجاح الطريقة التربوية </a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (60).png">خاص ب القادة</a>
+                <hr>
+                <h3 style="text-align: center; color: blue;">المطلبات</h3>
+                <hr>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (61).png">تعريف المطلبات</a>
+            </div>
+        </div>
+
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">اليات تطبيق منهاهج المتقدم </button>
+            <div class="dropdown-content">
+
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (63).png">اليات تطبيق المنهاهج الكشفية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (64).png">انواع التقدم ف المراحل </a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (66).png">التقدم الشخصى للجوال </a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (67).png">بطاقات مرتبية للكشاف الاول و التانى</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (68).png">المسار</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (69).png">مرتبة الجوال </a>
+
+
+            </div>
+        </div>
+
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">الخطط و البرامج </button>
+            <div class="dropdown-content">
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (71).png">تعريف الخطط</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (72).png">الخطة السنوية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (73).png">الخطة الشهرية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (74).png">النشاطات </a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (75).png">القيم الدينية و الاخلاقية</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (76).png">ارشادرات عامة للقادة</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (77).png">التطبيقات العلمية و البيئية</a>
+
+
+
+            </div>
+        </div>
+
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">موضعات مختلفة للجوالة </button>
+            <div class="dropdown-content">
+                <a href="#gallery" data-img="scoutpoy4.png/pag (78).png">وسائل الادمان و كيفيو الوقاية منها </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (79).png">الفنون و الادب </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (80).png">حفل فولكولور الشعبى</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (81).png">الاقتصاد و المواطنة</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (82).png">الندوة السياسية</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (83).png">الصحة و الرياضة</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (84).png">ارشادات عامة للقادة حين تنفيذ النشاط</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (85).png">مهارات للحياة</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (86).png">التخطيط و تنظيم العمل </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (87).png">الخدمة العامة و تنمية المجتمع</a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (88).png">التقليد و الفنون الكشفية </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (89).png">الاتصال العالمى </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (90).png">التقاليد و الفنون الكشفية </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (91).png">اكتشف شعبك </a>
+                <a href="#gallery" data-img="scoutpoy4.png/pag (92).png">التطلع للقيادة </a>
+            </div>
+        </div>
+
+        <div class="dropdown glowing-hand">
+            <button class="dropbtn">ملحق اهداف التنمية المستدامة </button>
+            <div class="dropdown-content">
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (95).png">اهداف التنمية المستدامة</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (96).png">الهدف الثالث و الرابع</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (97).png">الخامس و السادس</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (98).png">السابع و التامن و التاسع </a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (99).png">العاشر و الحادى عشر و الثانى عشر</a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (100).png">الثالث و الرابع و الخامس عشر </a>
+                <a href="#zoomGallery" data-imgs="scoutpoy4.png/pag (101).png">السادس و السابع عشر </a>
+
+
+
+            </div>
+        </div>
+
+        <!-- content -->
+    </div>
+
+    <div class="slider-container">
+        <div class="slider" id="slider">
+
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+            <div class="cover-book">
+                <img src="book//Generated Image October 29, 2025 - 1_28PM5555555.png" alt="غلاف الكتاب">
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="image-container" id="gallery">
+            <div class="inner-wrapper">
+                <img id="mainImage" src="Logo marquee/Untitled-1.png" alt="Scouts">
+            </div>
+        </div>
+        <div class="text-box" contenteditable="true" id="userText" placeholder="اكتب هنا..."></div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <button id="closeLightbox">✕</button>
+        <img id="lightboxImg" src="">
+    </div>
+    <div class="controls">
+        <button id="zoomIn">+</button>
+        <button id="openSlide">🖼️ عرض الصورة</button>
+
+        <button id="zoomOut">−</button>
+    </div>
+    <marquee behavior="alternate" direction="left" scrollamount="10">
+        <h1 class="mar1h1">إرادتنا قوية وخدمتنا إنسانية </h1>
+    </marquee>
+    <div class="board-wrapper">
+        <div class="zoom-container" id="zoomGallery">
+            <div class="zoom-inner" id="zoomInner">
+                <img id="zoomImage" src="Logo marquee/Untitled-1.png" alt="Scouts">
+            </div>
+        </div>
+        <div class="text-board" contenteditable="true" id="boardText" placeholder="اكتب هنا..."></div>
+    </div>
+
+    <div class="lightbox-new" id="lightboxNew">
+        <button id="closeLightboxNew">✕</button>
+        <img id="lightboxImgNew" src="">
+    </div>
+
+    <div class="zoom-controls">
+        <button id="zoomInNew">+</button>
+        <button id="openSlideNew">🖼️ عرض الصورة</button>
+
+        <button id="zoomOutNew">−</button>
+    </div>
+
+    <button id="scrollTopBtn" title="رجوع للأعلى">⬆</button>
+
+
+
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        // إظهار الزر عند التمرير للأسفل
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        // عند الضغط على الزر — صعود لأعلى الصفحة بسلاسة
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <script>
+        const nav = document.getElementById("tdih-glm-book-1");
+        const btn = document.getElementById("btn-nav");
+        btn.addEventListener('click', () => {
+            if (window.innerWidth >= 300 && window.innerWidth <= 1321) {
+                if (nav.style.display === "block") {
+                    nav.style.display = "none"
+                } else {
+                    nav.style.display = "block";
+                }
+            }
+        });
+    </script>
+    <script src="bookfour.js"></script>
+    <script src="bookfourlog.js"></script>
+</body>
+
+</html>

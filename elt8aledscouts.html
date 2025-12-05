@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Sans+Hegarty&family=Badeen+Display&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Delicious+Handrawn&family=Gravitas+One&family=Lalezar&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&family=Readex+Pro:wght@160..700&family=Vazirmatn:wght@100..900&display=swap"
+    rel="stylesheet">
+  <title>كتاب التقاليد الكشفية</title>
+  <link rel="stylesheet" href="t8aled.css">
+
+</head>
+<body>
+
+
+  </div>
+  <!-- ✅ زر الفتح -->
+  <h1 class="titlebook"> التقاليد الكشفية</h1>
+
+  <button id="openBtn">
+    <span class="icon">
+      <svg viewBox="0 0 20 20" width="20" height="20">
+        <rect y="2" width="20" height="2" fill="white"></rect>
+        <rect y="9" width="20" height="2" fill="white"></rect>
+        <rect y="16" width="20" height="2" fill="white"></rect>
+      </svg>
+    </span>
+  </button>
+  <!-- ✅ الخلفية -->
+  <div id="backdrop"></div>
+
+  <!-- ✅ الصندوق الجانبي -->
+  <div class="offcanvas" id="offcanvasRight">
+    <div class="offcanvas-header">
+      <h5>القائمة</h5>
+      <button class="closeBtn" id="closeBtn">&times;</button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="Homescout.html">🏠 الصفحة الرئيسية</a>
+      <a href="bookone.html"> كتاب مرحلة الاشبال</a>
+      <a href="booktow.html"> كتاب كشافة و مرشدات </a>
+      <a href="bookthree.html">كتاب مرحلة المتقدم</a>
+      <a href="bookfour.html">كتاب مرحلة جوالة</a>
+      <a href="M.ASHBAL.html">محاضرات لمرحلة الاشبال</a>
+      <a href="M.mrshdat.html">محاضرات لمرحلة الفتيان</a>
+      <a href="M.elmt8dm.html">محاضرات لمرحلة المتقدم </a>
+      <a href="M.elgwala.html">محاضرات لمرحلة الجوالة </a>
+      <a href="daleleelsharat.html">دليل الشارات</a>
+      <a href="liabarary.html">المكتبة التعلمية</a>
+      <a href="Homescout.html#school"> ابدا التعليم </a>
+      <a href="Homescout.html#churchfive">عن الكنيسة</a>
+      <a href="el8dasat.html">مواعيد القداسات</a>
+      <a href="Homescout.html#sct2"> من نحن</a>
+      <a href="Homescout.html#sectionseex">تواصل معانا</a>
+    </div>
+  </div>
+  <!--  -->
+  <div class="book" id="bookContainer"></div>
+
+  <!-- أزرار التنقل -->
+  <button id="prev" onclick="prev()">⏪</button>
+  <button id="next" onclick="next()">⏩</button>
+
+  <!-- أزرار الزوم -->
+  <div class="zoom-controls">
+    <button onclick="zoomIn()">🔍 تكبير</button>
+    <button onclick="zoomOut()">🔎 تصغير</button>
+  </div>
+
+  <!-- ✅ البوكسات اللي تحت -->
+  <div class="preview-container" id="previewContainer"></div>
+
+
+  <script>
+    const totalPages = 39;
+    const imgFolder = "scoutst8aled/scou "; // مسار المجلد فقط بدون رقم
+
+    const book = document.getElementById("bookContainer");
+    const previewContainer = document.getElementById("previewContainer");
+
+    // توليد الصفحات تلقائيًا
+    for (let i = 4; i < totalPages + 4; i++) { // يبدأ من 4 (لو أول صورة scou (4).png)
+      const page = document.createElement("div");
+      page.classList.add("page");
+      if (i === 4) page.classList.add("active");
+
+      page.innerHTML = `
+    <h2>صفحة ${i - 3}</h2>
+    <img src="${imgFolder}(${i}).png" alt="صورة ${i}" id="img${i}">
+  `;
+      book.appendChild(page);
+    }
+
+    let current = 1;
+
+    function showPage(num) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelector(`#bookContainer .page:nth-child(${num})`).classList.add('active');
+      updatePreviews();
+    }
+
+    function next() {
+      if (current < totalPages) {
+        current++;
+        showPage(current);
+      }
+    }
+
+    function prev() {
+      if (current > 1) {
+        current--;
+        showPage(current);
+      }
+    }
+
+    // ✅ تحديث الصور القادمة في البوكسات السفلية
+    function updatePreviews() {
+      previewContainer.innerHTML = "";
+      for (let i = 1; i <= 3; i++) {
+        const nextPage = current + i;
+        if (nextPage <= totalPages) {
+          const box = document.createElement("div");
+          box.classList.add("preview-box");
+          const imgNumber = nextPage + 3; // علشان أول صورة عندنا (4)
+          box.innerHTML = `<img src="${imgFolder}(${imgNumber}).png" alt="صورة ${nextPage}">`;
+          previewContainer.appendChild(box);
+
+          setTimeout(() => box.classList.add("show"), i * 150);
+        }
+      }
+    }
+
+    updatePreviews();
+
+    // 🔍 الزوم
+    let zoomLevel = 1;
+
+    function getCurrentImage() {
+      return document.querySelector(`#bookContainer .page:nth-child(${current}) img`);
+    }
+
+    function zoomIn() {
+      zoomLevel += 0.2;
+      getCurrentImage().style.width = (zoomLevel * 100) + '%';
+    }
+
+    function zoomOut() {
+      zoomLevel = Math.max(1, zoomLevel - 0.2);
+      getCurrentImage().style.width = (zoomLevel * 100) + '%';
+    }
+
+    // 🖱️ السحب داخل الصفحة
+    document.addEventListener('mousedown', e => {
+      const page = document.querySelector('.page.active');
+      if (!page) return;
+      page.isDragging = true;
+      page.startX = e.clientX;
+      page.startY = e.clientY;
+      page.scrollLeftStart = page.scrollLeft;
+      page.scrollTopStart = page.scrollTop;
+    });
+
+    document.addEventListener('mouseup', () => {
+      const page = document.querySelector('.page.active');
+      if (page) page.isDragging = false;
+    });
+
+    document.addEventListener('mousemove', e => {
+      const page = document.querySelector('.page.active');
+      if (!page || !page.isDragging) return;
+      e.preventDefault();
+      page.scrollLeft = page.scrollLeftStart - (e.clientX - page.startX);
+      page.scrollTop = page.scrollTopStart - (e.clientY - page.startY);
+    });
+
+    // 🎨 تلوين الصفحة حسب اللون المختار
+    document.querySelectorAll('#colorPickers input').forEach(input => {
+      input.addEventListener('input', e => {
+        const activePage = document.querySelector('.page.active');
+        activePage.style.backgroundColor = e.target.value;
+      });
+    });
+  </script>
+  <script>
+    const openBtn = document.getElementById('openBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const offcanvas = document.getElementById('offcanvasRight');
+    const backdrop = document.getElementById('backdrop');
+
+    openBtn.addEventListener('click', () => {
+      offcanvas.classList.add('open');
+      backdrop.classList.add('show');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      offcanvas.classList.remove('open');
+      backdrop.classList.remove('show');
+    });
+
+    backdrop.addEventListener('click', () => {
+      offcanvas.classList.remove('open');
+      backdrop.classList.remove('show');
+    });
+  </script>
+</body>
+
+</html>

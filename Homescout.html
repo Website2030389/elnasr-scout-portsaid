@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>الموقع الرسمى لكشافة لكنيسة ابو سفين و العفيفة دميانة</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script>
+    const LOCALSTORAGE_KEY = "registered_badge_form_v3";
+
+    // تحقق إذا المستخدم مسجل
+    const saved = localStorage.getItem(LOCALSTORAGE_KEY);
+    if (!saved) {
+      // لو مش مسجل، ارجع المستخدم لصفحة التسجيل
+      window.location.href = "index.html";
+    }
+  </script>
+
+  </script>
+  <link rel="stylesheet" href="backgrund.css">
+  <link rel="stylesheet" href="contenthome.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="sectionone.css">
+  <link rel="stylesheet" href="sectiontow.css">
+  <link rel="stylesheet" href="sectionthree.css">
+  <link rel="stylesheet" href="sectionfour.css">
+  <link rel="stylesheet" href="marquee.css">
+  <link rel="stylesheet" href="sctionfive.css">
+  <!-- bootstrap -->
+  <!-- Bootstrap CSS -->
+
+
+  <!-- googel font  -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Badeen+Display&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Delicious+Handrawn&family=Gravitas+One&family=Lalezar&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&family=Vazirmatn:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Delicious+Handrawn&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Delicious+Handrawn&family=Gravitas+One&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Badeen+Display&family=Delicious+Handrawn&family=Gravitas+One&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Badeen+Display&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Delicious+Handrawn&family=Gravitas+One&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Badeen+Display&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Delicious+Handrawn&family=Gravitas+One&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&family=Vazirmatn:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Badeen+Display&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Delicious+Handrawn&family=Gravitas+One&family=Lalezar&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&family=Vazirmatn:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Badeen+Display&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Delicious+Handrawn&family=Gravitas+One&family=Lalezar&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&family=Vazirmatn:wght@100..900&display=swap"
+    rel="stylesheet">
+  <!-- fontawoson -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+  <!--  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- خريطة -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.164.0/build/three.min.js"></script>
+</head>
+
+<body>
+  <!-- video-backgrund -->
+  <div class="slider-video">
+    <video id="v1" src="video/9292898-uhd_4096_2160_25fps.mp4" autoplay loop muted playsinline></video>
+    <video id="v2" src="video/9303548-uhd_4096_2160_25fps.mp4" autoplay loop muted playsinline></video>
+    <video id="v3" src="video/9303551-uhd_4096_2160_25fps.mp4" autoplay loop muted playsinline></video>
+  </div>
+  <a id="logo-link" href="fb://facewebmodal/f?href=https://www.facebook.com/share/176dYZT5kU/?mibextid=wwXIfr" onclick="
+     setTimeout(() => {
+       window.location = 'https://www.facebook.com/share/176dYZT5kU/?mibextid=wwXIfr';
+     }, 500);
+   " target="_blank">
+    <img src="WhatsApp Image 2025-10-18 at 17.08.48.jpeg" class="logoresbosive" alt="logo">
+
+  </a>
+  <!-- nav-bar -->
+  <div class="hamburger">&#9776;</div>
+  <nav class="navbar">
+
+    <div class="logo">
+      <img id="img-logo" src="logo-nav-bar/logonav.png" alt="logo">
+      Scout
+    </div>
+
+    <ul class="nav-links">
+
+      <!-- login & join للعرض الصغير -->
+
+      <li><a href="#">الرئسية</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">المناهج التعليمية ▾</a>
+        <div class="mega-menu">
+
+          <div class="mega-column">
+            <h3>عن المراحل</h3>
+            <p>
+              تتكون المراحل الكشفية من: الأشبال والمرشدات، الكشافة والمرشدات،
+              المتقدمات والرائدات، وتشمل التقاليد الكشفية والأنشطة التي تنمي روح الفريق والانتماء.
+            </p>
+            <a href="liabarary.html" class="card-link">اعرف المزيد →</a>
+          </div>
+
+          <div class="divider1"></div>
+
+
+          <div class="mega-column">
+            <span class="back-btn">◀ رجوع</span>
+
+            <h4>المراحل</h4>
+            <ul>
+              <li><i class="fa-solid fa-seedling"> </i> <a href="bookone.html">أشبال و زهرات</a></li>
+              <li><i class="fa-solid fa-campground"> </i> <a href="booktow.html">كشافة و مرشدات</a></li>
+              <li><i class="fa-solid fa-mountain"> </i> <a href="bookthree.html">متقدم و رائدات</a></li>
+              <li><i class="fa-solid fa-hiking"> </i> <a href="bookfour.html">جوالة</a> </li>
+              <li><i class="fa-solid fa-scroll"> </i> <a href="elt8aledscouts.html">تقاليد كشفية</a> </li>
+            </ul>
+          </div>
+
+          <div class="divider1"></div>
+
+          <div class="mega-column">
+            <h6>Learn more about scouting</h6>
+            <ul>
+              <img id="imgCurricula"
+                src="imgCurricula/pngtree-cartoon-scouts-with-wooden-signboard-png-image_12185797.png" alt="logo3d">
+            </ul>
+          </div>
+
+        </div>
+      </li>
+
+      <li class="dropdown1">
+        <a href="#" class="dropbtn1">محاضرات كشفية ▾</a>
+        <div class="mega-menu1">
+
+
+          <div class="mega-column1">
+            <!-- <span class="back-btn">◀ رجوع</span> -->
+
+
+            <h3>المحاضرات الكشفية</h3>
+            <p>
+              تشمل المحاضرات الكشفية جميع المراحل: الأشبال والمرشدات، الكشافة والمرشدات، المتقدمات
+              والرائدات، الجوالة، وتشمل أيضًا التقاليد الكشفية لتطوير المهارات وتنمية روح القيادة والعمل
+              الجماعي.
+            </p>
+            <a href="#school" class="card-link1">اعرف المزيد →</a>
+          </div>
+
+          <div class="divider1"></div>
+
+          <div class="mega-column1">
+            <h4>المراحل</h4>
+            <ul>
+              <ul>
+                <li><a href="M.ASHBAL.html"><i class="fa-solid fa-seedling"></i> أشبال و زهرات</a></li>
+                <li><a href="M.mrshdat.html"><i class="fa-solid fa-campground"></i> كشافة و مرشدات</a></li>
+                <li><a href="M.elmt8dm.html"><i class="fa-solid fa-mountain"></i> متقدم و رائدات</a></li>
+                <li><a href="M.elgwala.html"><i class="fa-solid fa-hiking"></i> جوالة</a></li>
+
+              </ul>
+
+            </ul>
+          </div>
+        </div>
+      </li>
+
+
+
+
+      <li><a href="#" id="protected-link">عروض تقديمية</a></li>
+
+
+
+      <li><a href="#" onclick="showMessage()">مسابقات و العاب و برامج كشفية</a></li>
+      <li><a href="#activities">أنشطة و رحلات</a></li>
+      <li><a href="daleleelsharat.html"> شارات الهواية </a></li>
+      <li><a href="#sectionseex">تواصل معنا </a></li>
+    </ul>
+
+
+    <div class="auth">
+      <a href="#" class="login" onclick="showLoginMsg(event)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z">
+          </path>
+        </svg>
+        Login</a>
+      <a href="#" class="cta" onclick="showJoinMsg(event)">Join Now</a>
+
+
+  </nav>
+
+
+  </div>
+  <div id="auth-popup" class="auth-popup">
+    <div class="auth-popup-content">
+      <h2 id="auth-title"></h2>
+      <p id="auth-text"></p>
+      <button onclick="closeAuthPopup()">إغلاق</button>
+    </div>
+  </div>
+
+  <div id="activityPopup" class="activity-popup">
+    <div class="activity-popup-box">
+      <span class="activity-close" onclick="closeActivityPopup()">&times;</span>
+      <h3>❌ لا يوجد أنشطة أو رحلات حالياً</h3>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>⚠️ الموقع تحت التجهيز</h2>
+      <p>تابعونا قريبًا لمزيد من الفعاليات و البرامج الكشفية 🙏</p>
+      <button onclick="closeMessage()">إغلاق</button>
+    </div>
+  </div>
+
+  <div id="login-slide" class="slide">
+    <div class="slide-content">
+      <h2>Welcome </h2>
+      <P style="color: #e9e8e4; font-size: 18px;">هذا المحتوى خاص ب القادة فقط </P>
+      <i id="icon-nav-slide1" class="fa-jelly fa-regular fa-user"></i>
+      <input class="inputPresentations" type="text" id="username" placeholder="user name ">
+      <input class="inputPresentations2" type="password" id="password" placeholder="password ">
+      <button id="login-btn">Log in</button>
+      <button id="close-btn">close</button>
+      <p id="error-msg"></p>
+    </div>
+  </div>
+
+
+
+  <!-- content-home-TEXT -->
+  <div class="titel-home-content">
+    <div class="title-home">
+      <h1>مجموعات <span class="title-home-span">النصر</span> الكشفية </h1>
+      <p> بكنيسة الشهيد العظيم ابى سفين و القديسة العفيفة دميانة</p>
+    </div>
+  </div>
+  <!-- content-home-ICON -->
+  <div id="icon-titel-home">
+    <div class="input-container">
+      <input type="text" name="text" class="input" placeholder="ابحث هنا..." autofocus>
+      <i id="church" class="fa-solid fa-church icon"></i>
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <div class="content-wep">
+    <div class="logo-row">
+      <div class="marquee">
+        <ul class="marquee-content">
+          <li><img src="Logo marquee/rtrttttttttt.png" alt="المنظمة العالمية للكشافة"> المنظمة العالمية للكشافة</li>
+          <li><img src="Logo marquee/images 3.png" alt="الأتحاد المصري للكشافة والمرشدات">الأتحاد المصري للكشافة
+            والمرشدات</li>
+          <li><img src="Logo marquee/logonav.png" alt="Boy Scouts فتيان الكشافة">Boy Scouts فتيان الكشافة</li>
+          <li><img src="Logo marquee/ChatGPT Image Oct 18, 2025, 09_20_44 PM.png" alt="أشبال">أشبال </li>
+          <li><img src="Logo marquee/ff.png" alt="GitHub">الكشاف</li>
+          <li><img src="Logo marquee/logo_no_bg.png" alt="الكشاف المتقدم">الكشاف المتقدم</li>
+          <li><img src="Logo marquee/Untitled-1.png" alt="جوالة">جوالة</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="logo-row">
+      <div class="marquee reverse">
+        <ul class="marquee-content">
+          <li><img src="Logo marquee/Untitled-1.png" alt="جوالة">جوالة</li>
+          <li><img src="Logo marquee/logo_no_bg.png" alt="الكشاف المتقدم">الكشاف المتقدم</li>
+          <li><img src="Logo marquee/ff.png" alt="الكشاف">الكشاف</li>
+          <li><img src="Logo marquee/ChatGPT Image Oct 18, 2025, 09_20_44 PM.png" alt="أشبال">أشبال </li>
+          <li><img src="Logo marquee/logonav.png" alt="Boy Scouts فتيان الكشافة">Boy Scouts فتيان الكشافة</li>
+          <li><img src="Logo marquee/images 3.png" alt="الأتحاد المصري للكشافة والمرشدات">الأتحاد المصري للكشافة
+            والمرشدات</li>
+          <li><img src="Logo marquee/rtrttttttttt.png" alt="المنظمة العالمية للكشافة"> المنظمة العالمية للكشافة</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Section-TOw -->
+  <!--  the beginning - the beginning  -->
+  <div class="s1">
+    <div class="s2">
+      <!-- the beginning -->
+      <div id="section2">
+        <!--  beginning1  -->
+        <div class="carousel-container">
+          <!--  beginning2  -->
+          <div class="carousel-track">
+
+
+            <div id="sct2" class="carousel-card">
+              <div class="card-image-container">
+                <img src="sectiontow-img/Generated Image October 30, 2025 - 4_41PM.png" alt="Synthwave City"
+                  class="card-image">
+              </div>
+              <div id="card-content" class="card-content">
+                <h3 class="card-title text-xl font-bold text-cyan-400" data-text="Project Alpha"> من نكون؟</h3>
+                <p class="card-description">نحن مجموعة النصر الكشفية بكنيسة الشهيد أبو سيفين والقديسة دميانة – بورسعيد،
+                  نؤمن إن الكشافة مش مجرد نشاط أو زي موحد… لكنها رحلة حياة بتصنع قادة، وتزرع القيم، وتربّي جيل يعرف يعني
+                  إيه مسؤولية وانتماء.
+                  من وسط خيمنا ونيراننا الكشفية، بنتعلم نخدم، نحب، ونتقدم خطوة بخطوة علشان نكون دايمًا نور في المجتمع.
+                </p>
+                <div class="card-progress">
+                  <div class="progress-value" style="width:100%"></div>
+                </div>
+                <div class="card-stats">
+                  <span>Creativity energy II</span>
+                  <span>65% COMPLETE</span>
+                </div>
+              </div>
+              <div class="tech-details">
+                <div class="tech-tag">Driving energy</div>
+                <div class="tech-tag">Super development</div>
+                <div class="tech-tag">Power makers</div>
+              </div>
+            </div>
+            <!--  beginning  -->
+            <div class="carousel-card">
+              <div>
+                <div class="card-image-container">
+                  <img src="sectiontow-img/Generated Image October 30, 2025 - 4_44PM2.png" alt="Neuro Interface"
+                    class="card-image">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title text-xl font-bold text-blue-400" data-text="Neuro-Link UI">إيه اللي بنقدمه؟</h3>
+                  <p class="card-description">في مجموعة النصر الكشفية، إحنا مش بس بنقدّم نشاط ترفيهي… إحنا بنبني شخصية.
+                    من خلال التدريبات، المعسكرات، والرحلات الكشفية، بنعلّم أبناءنا الانضباط، القيادة، العمل الجماعي، وحب
+                    الخدمة.
+                    بنقدّم تجربة بتفضل مع كل كشاف طول حياته… بتكوّنه وتدعّمه، وتخليه جاهز يواجه الحياة بثقة وإيمان.</p>
+                  <div class="card-progress">
+                    <div class="progress-value" style="width:42%"></div>
+                  </div>
+                  <div class="card-stats">
+                    <span>Future leaders I</span>
+                    <span>42% COMPLETE</span>
+                  </div>
+                </div>
+                <div class="tech-details">
+                  <div class="tech-tag">The power of challenge</div>
+                  <div class="tech-tag">Glory makers</div>
+                  <div class="tech-tag">Future leaders</div>
+                </div>
+              </div>
+            </div>
+            <!--  beginning  -->
+            <div class="carousel-card">
+              <div class="card-image-container">
+                <img src="sectiontow-img/Generated Image October 30, 2025 - 4_48PM33.png" alt="Quantum Core"
+                  class="card-image">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title text-xl font-bold text-purple-400" data-text="Quantum Entanglement"> رسالتنا؟</h3>
+                <p class="card-description">رسالتنا في مجموعة النصر الكشفية إننا نربّي جيل قوي في الإيمان، ملتزم في
+                  الحياة، وقائد في مجتمعه.
+                  نسعى دايمًا نزرع في نفوس الكشافة قيم الخدمة، والانتماء، والمسؤولية علشان يكونوا نور في كل مكان يروحوه.
+                  هدفنا مش بس نكوّن كشاف… لكن نكوّن إنسان حقيقي قادر يغيّر الواقع حوالينه.</p>
+                <div class="card-progress">
+                  <div class="progress-value" style="width:89%"></div>
+                </div>
+                <div class="card-stats">
+                  <span>Limitless ambition III</span>
+                  <span>89% COMPLETE</span>
+                </div>
+              </div>
+              <div class="tech-details">
+                <div class="tech-tag">Knights of creativity</div>
+                <div class="tech-tag">Energy of change</div>
+                <div class="tech-tag">Innovative minds</div>
+              </div>
+            </div>
+            <!--  beginning  -->
+            <div class="carousel-card">
+              <div class="card-image-container">
+                <img src="sectiontow-img/Generated Image October 30, 2025 - 4_49PM444.png" alt="Orbital Station"
+                  class="card-image">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title text-xl font-bold text-amber-400" data-text="Project Chimera">اية هو هدفنا وإحنا
+                  بنتحرك</h3>
+                <p class="card-description">هدفنا في مجموعة النصر الكشفية مش بس إننا نتحرك من مكان لمكان… لكن نتحرك
+                  علشان نِحدث فرق.
+                  كل نشاط، وكل معسكر، وكل خطوة بنمشيها، وراها هدف:
+                  إننا نربّي قادة حقيقيين يخدموا كنيستهم ومجتمعهم بمحبة، انضباط، وإيمان.
+                  نؤمن إن الحركة الكشفية وسيلة لتغيير النفس… قبل ما تغيّر العالم</p>
+                <div class="card-progress">
+                  <div class="progress-value" style="width:51%"></div>
+                </div>
+                <div class="card-stats">
+                  <span>Future leaders II</span>
+                  <span>51% COMPLETE</span>
+                </div>
+              </div>
+              <div class="tech-details">
+                <div class="tech-tag">Constant innovation</div>
+                <div class="tech-tag">A bright future</div>
+                <div class="tech-tag">Continuous development</div>
+              </div>
+            </div>
+            <!--  beginning  -->
+            <div class="carousel-card">
+              <div class="card-image-container">
+                <img src="sectiontow-img/Generated Image October 30, 2025 - 4_52PM5555.png" alt="Data Stream"
+                  class="card-image">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title text-xl font-bold text-emerald-400" data-text="Aether Network"> اللي بنصنعه كل
+                  يوم؟</h3>
+                <p class="card-description">كل يوم في مجموعة النصر الكشفية هو فرصة جديدة لصناعة شيء حقيقي.
+                  نصنع روح الفريق من خلال العمل معًا، ونصنع القيادة من خلال المسؤولية، ونصنع الفرق من خلال الخدمة
+                  والمحبة.
+                  في كل لقاء، وفي كل تدريب، بنزرع قيمة… وبنبني شخصية قادرة تواجه الحياة بقلب قوي وإيمان ثابت.</p>
+                <div class="card-progress">
+                  <div class="progress-value" style="width:78%"></div>
+                </div>
+                <div class="card-stats">
+                  <span>Willpower III</span>
+                  <span>78% COMPLETE</span>
+                </div>
+              </div>
+              <div class="tech-details">
+                <div class="tech-tag">Do the impossible</div>
+                <div class="tech-tag">Move forward with confidence</div>
+                <div class="tech-tag">Dream and achieve</div>
+              </div>
+            </div>
+
+
+
+            <!--  beginning  -->
+            <div class="carousel-card">
+              <div class="card-image-container">
+                <img src="sectiontow-img/Generated Image October 30, 2025 - 5_48PM77777.png" alt="Data Stream"
+                  class="card-image">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title text-xl font-bold text-emerald-400" data-text="Aether Network"> أين نعمل؟ </h3>
+                <p class="card-description">نعمل من قلب كنيسة الشهيد أبو سيفين والقديسة دميانة بورسعيد، ومنها نخرج
+                  برسالة الكشافة إلى كل مكان.
+                  مقرنا مش مجرد مكان للتدريب… لكنه بيت كبير بيجمعنا، بننطلق منه للمخيمات، والأنشطة، والخدمة في المجتمع.
+                  وجودنا مش محدود بموقع، لأن رسالتنا بتوصل لكل قلب عنده شغف إنه يصنع فرق.</p>
+                <div class="card-progress">
+                  <div class="progress-value" style="width:78%"></div>
+                </div>
+                <div class="card-stats">
+                  <span>Unbreakable resolve III</span>
+                  <span>78% COMPLETE</span>
+                </div>
+              </div>
+              <div class="tech-details">
+                <div class="tech-tag">Face the challenge</div>
+                <div class="tech-tag">Innovative mindss</div>
+                <div class="tech-tag">Move forward with confidence</div>
+              </div>
+            </div>
+
+
+
+
+            <!--  beginning  -->
+            <div class="carousel-card">
+              <div class="card-image-container">
+                <img src="sectiontow-img/Generated Image October 30, 2025 - 4_56PM6666.png" alt="Data Stream"
+                  class="card-image">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title text-xl font-bold text-emerald-400" data-text="Aether Network"> انضم الينا </h3>
+                <p class="card-description">لو بتحب التحدي… وبتدور على مكان تتعلّم فيه، وتكبر، وتبني ذكريات حقيقية،
+                  فالكشافة هي مكانك.
+                  في مجموعة النصر الكشفية هتلاقي عيلة بتشاركك كل لحظة، من أول ضحكة في التدريب… لحد نار المعسكر اللي
+                  بتدفّي القلوب.
+                  هتتعلّم إنك تكون قائد، مسئول، ومصدر نور للّي حواليك.
+                  خطوتك الأولى معانا مش مجرد انضمام… دي بداية رحلة هتغيّرك للأفضل</p>
+                <div class="card-progress">
+                  <div class="progress-value" style="width:78%"></div>
+                </div>
+                <div class="card-stats">
+                  <span>The future is ours III</span>
+                  <span>78% COMPLETE</span>
+                </div>
+              </div>
+              <div class="tech-details">
+                <div class="tech-tag">Fiery minds</div>
+                <div class="tech-tag">Motor driving</div>
+                <div class="tech-tag">Iron will</div>
+              </div>
+            </div>
+
+            <!--  beginning2  -->
+          </div>
+
+
+          <!-- button -->
+          <button class="carousel-button prev">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button class="carousel-button next">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+
+          <div class="carousel-indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+          </div>
+
+          <!--  beginning2  -->
+        </div>
+        <!-- the beginning -->
+      </div>
+      <!--  the beginning - the beginning  -->
+    </div>
+  </div>
+  <!-- sectionthree -->
+  <div id="school" class="div1">
+    <canvas id="space"></canvas>
+    <div class="card-title">
+      <h2>رحلة الكشاف نحو التعلّم والنموّ </h2>
+      <div class="image-container">
+        <img src="https://iili.io/KSTN6ps.png" alt="">
+        <div class="light-bar"></div>
+      </div>
+      <p class="title1">ابدأ رحلتك التعليمية بخطوات واثقة نحو النجاح.</p>
+      <a class="li-sc3" href="liabarary.html">المزيد من التفاصيل</a>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <h2>الجانب الروحى</h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p>تعمل الكشافة على غرس الإيمان العميق بالله، وتنمية الضمير الحيّ،
+          وتربية النفس على الصدق والمحبة والخدمة، حتى يعيش الكشاف
+          بسلام داخلي، ويشعر بطمأنينة تملأ قلبه، فينشر الخير والنور
+          حيثما كان، مؤمنًا أن القوة الحقيقية تبدأ من نقاء الروح وصفاء القلب</p>
+        <a href="bookfour.html#school1">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2>الجانب العقلى </h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTNsjf.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-tow">تهدف الكشافة إلى تنمية التفكير العلمي والقدرة على التحليل والنقد البنّاء،
+          من خلال التجارب التطبيقية، والاستخدام الواعي للتكنولوجيا الحديثة،
+          لتوسيع آفاق المعرفة، وفهم القضايا العلمية والبيئية والاقتصادية بعمق،
+          والمشاركة الفعالة في إيجاد حلول مبتكرة لها، مع صقل المواهب الأدبية
+          والفنية، ليصبح الكشاف نموذجًا يجمع بين العلم والإبداع والمسؤولية.</p>
+        <a href="bookthree.html#scho2">المزيد من التفاصيل</a>
+      </div>
+
+      <div class="card">
+        <h2>العلوم والتكنولوجيا</h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTNLQ4.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-three">تسعى الكشافة في عصر التكنولوجيا والذكاء الاصطناعي إلى إعداد كشافٍ مفكرٍ وواعٍ،
+          يستخدم أدوات العصر بذكاء لخدمة مجتمعه، ويتعامل مع التحديات الرقمية
+          بروح الإبداع والمسؤولية، فيتعلم كيف يطوّر نفسه ويواكب التغيير،
+          ويجمع بين العلم والعمل، بين التقنية والإنسانية، مؤمنًا أن التقدّم
+          الحقيقي يبدأ من عقلٍ منفتح وقلبٍ نابض بروح الكشفية والعمل الجماعي</p>
+        <a href="M.elmt8dm.html#lecture7">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2>لجانب الصحى و البدنى </h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-four">تعمل الكشافة على بناء كشافٍ قويّ الجسد ومتّزن العقل، يدرك أهمية صحته
+          ويجعل النشاط البدني أسلوب حياة، فيمارس الرياضة بروحٍ جماعية وتنافسٍ نبيل،
+          ويحافظ على لياقته ونظامه الغذائي، ملتزمًا بالعادات الصحية السليمة،
+          ليكون قادرًا على خدمة مجتمعه بطاقةٍ إيجابية وحيوية دائمة، مؤمنًا أن
+          الجسم السليم هو ركيزة العطاء، وأن القوة الحقيقية تولد من الإرادة والانضباط.</p>
+        <a href="M.elmt8dm.html#lecture4">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2>الجانب الاجتماعي </h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-five">تعمل الكشافة على تنمية روح التعاون والمسؤولية داخل المجتمع،
+          فتغرس في الكشاف قيم الاحترام والمشاركة والعطاء، وتشجّعه على
+          خدمة الآخرين والمساهمة في تنمية بيئته، ليكون عنصرًا فعّالًا
+          يعمل بروح الفريق ويؤمن بقوة الوحدة والعمل الجماعي،
+          موقنًا أن خدمة المجتمع ليست واجبًا فقط، بل شرفٌ يعبّر عن الانتماء والإخلاص.</p>
+        <a href="M.mrshdat.html#lecture4">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2>المهارات الكشفية </h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-six">تعمل الكشافة على تنمية روح التعاون والمسؤولية داخل المجتمع،
+        <p> التحلي بالوعد وقانون الكشافة.
+          معرفة تاريخ الحركة الكشفية.
+          اكتساب بعض مهارات حياة الخلاء.
+          اكتساب القيم الأخلاقية عن طريق ممارسة التقاليد الكشفية.
+          تنمية بعض مهارات القيادة عن طريق العمل في الطلائع.
+          تنمية حب المعرفة والاستكشاف والمغامرة</p>
+        <a href="bookfour.html#schooo4">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2> الجانب الوطنى</h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-seven">يتعرّف الكشاف على أهم مميزات وطنه (الوطن الأم والوطن العربي) من النواحي الجغرافية
+          والتاريخية والثقافية.
+
+          يدرك قيمة الانتماء والولاء من خلال معرفة الخدمات والإنجازات التي تقدّمها الجهات الرسمية وغير الرسمية لخدمة
+          المواطنين.
+
+          يشارك بفاعلية في الاحتفالات والمناسبات الوطنية والعربية، ويعبّر عن اعتزازه بهويته ومكانته بين الأمم.
+
+          يتعلّم أهمية المواطنة الصالحة من خلال الالتزام بالنظام، والمشاركة في تنمية المجتمع، واحترام رموزه وقوانينه.
+
+          يسعى ليكون قدوة في العمل والبناء، مؤمنًا أن حب الوطن يُترجم بالفعل والعطاء لا بالكلام فقط.</p>
+        <a href="bookfour.html#school1">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2>الجانب الكشفى </h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-eight">يمارس الكشاف الفنون والمهارات الكشفية بما يتيح له تنفيذ الأنشطة الفردية والجماعية
+          في الجوانب الأربعة الأخرى، وفق الطرائق الكشفية السليمة،
+          مؤديًا واجباته طبقًا للمبادئ الكشفية،
+          سعيًا لتحقيق الهدف التربوي للحركة الكشفية.</p>
+        <a href="bookfour.html#school1">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2> الجانب المهاري</h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-nine">تنمية القدرة على التذوّق الفني من خلال ممارسة الفنون المختلفة وتطبيقها في الأنشطة الكشفية.
+
+          تطوير المهارات الأدبية واللغوية عبر كتابة القصص، وإلقاء الشعر، والمشاركة في العروض الثقافية.
+
+          تشجيع الإبداع والتعبير الحرّ ليعبّر الكشاف عن أفكاره ومواهبه بطريقة بنّاءة وجذّابة.
+
+          اكتساب مهارات يدوية وعملية تُستخدم في الخدمة العامة والمشروعات الكشفية.
+
+          تعزيز الثقة بالنفس من خلال إتقان المهارات المتنوعة وربطها بالقيم الكشفية في الحياة اليومية.</p>
+        <a href="M.elgwala.html#lecture8">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2> الجانب البيئي</h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-ten">=تنمية الوعي البيئي لدى الكشاف بأن الإنسان جزء من البيئة يؤثر فيها ويتأثر بها.
+
+          التعرّف على طرق المحافظة على البيئة ومواردها الطبيعية من خلال الممارسات اليومية السليمة.
+
+          دراسة المشكلات البيئية كالتلوث وتغير المناخ والتصحر، والبحث عن سبل الحدّ منها.
+
+          المشاركة في الأنشطة البيئية مثل حملات التشجير والنظافة وترشيد استهلاك الموارد.
+
+          غرس روح المسؤولية البيئية ليصبح الكشاف قدوة في الحفاظ على الطبيعة وصون جمالها للأجيال القادمة.</p>
+        <a href="M.elmt8dm.html#lecture5">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2>حياتنا في المجتمع </h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-eleven">معرفة عوامل التماسك والتضامن الاجتماعي وأثرها في بناء المجتمع.
+
+          التعرف على دور المؤسسات الحكومية وغير الحكومية مثل الحكومة والنقابات والاتحادات والمنظمات الأهلية في دعم
+          المجتمع.
+
+          دراسة المشكلات الاجتماعية المختلفة وطرق التعامل معها وإيجاد الحلول المناسبة لها.
+
+          تعلم كيفية إقامة وتنفيذ المشروعات التنموية التي تسهم في تحسين حياة الأفراد.
+
+          اكتساب المهارات الحياتية الأساسية مثل حل المشكلات، والتعبير والمناقشة، واحترام آراء الآخرين، وفن التعامل مع
+          الناس.
+
+          تعلم أساليب التعامل مع ذوي الاحتياجات الخاصة بروح التعاون والمساواة والتقدير.</p>
+        <a href="bookfour.html#schooo4">المزيد من التفاصيل</a>
+      </div>
+      <div class="card">
+        <h2>الاتصال العالمي </h2>
+        <div class="image-container">
+          <img src="https://iili.io/KSTN6ps.png" alt="">
+          <div class="light-bar"></div>
+        </div>
+        <p class="text-tewelve">تنمية مهارات التواصل باللغات الأجنبية إلى جانب اللغة الأم، لتعزيز القدرة على الفهم
+          والتعبير والتفاعل مع الآخرين.
+
+          التواصل مع الأصدقاء خارج الوطن من خلال الوسائل الحديثة المختلفة، لتبادل الثقافات والخبرات الكشفية حول العالم.
+
+          تعميق روح الانتماء والولاء للوطن عبر تمثيل صورته المشرفة في المحافل الدولية، والتواصل الإيجابي مع الشعوب
+          الأخرى بما يعكس القيم الكشفية والأخلاقية.</p>
+        <a href="bookfour.html#school1">المزيد من التفاصيل</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- sectionfour -->
+  <div class="section3" id="section3">
+    <div class="titles3">
+      <h1>مهارات الكشاف الخفية</h1>
+      <p>ما لا يُقال في الدورات التدريبية</p>
+    </div>
+
+    <div class="card-section">
+      <div class="card4" data-title="قراءة الموقف" data-text="الكشاف الحقيقي لا ينتظر الأوامر، بل يراقب المواقف من حوله بعين حادة وفكر يقظ،
+ليتمكّن من تقييم الظروف بسرعة واتخاذ القرار المناسب.
+يتدرّب على ملاحظة التفاصيل الصغيرة وفهم ردود أفعال الآخرين،
+مستفيدًا من خبراته السابقة ومبادئ الكشافة، ليكون دائمًا مستعدًا لأي تحدٍ،
+ويقدّم المساعدة أو الحلول قبل أن يُطلب منه ذلك، مؤمنًا أن القدرة على قراءة الموقف
+هي مفتاح القيادة الفعّالة والمسؤولية الناضجة في كل الظروف.">
+        <img class="img4"
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="">
+        <h2 class="h4">مهارة قراءة الموقف</h2>
+        <p class="p4">الكشاف الحقيقي لا ينتظر الأوامر، بل يراقب المواقف من حوله بعين حادة وفكر يقظ</p>
+        <button class="btn-sctionfuor">اعرف المزيد </button>
+      </div>
+
+      <div class="card4" data-title="القيادة الصامتة" data-text="يعرف كيف يحافظ على تركيزه وصفاء ذهنه حتى في الأوقات الصعبة أو تحت الضغط،
+ويستخدم الهدوء كأسلوب للتفكير السليم واتخاذ القرارات الصائبة.
+تساعده هذه المهارة على التعامل مع الآخرين بوعي واحترام،
+وتجعل منه قائدًا قادرًا على الموازنة بين العقل والعاطفة،
+مؤمنًا أن الهدوء هو سر النجاح والسيطرة على المواقف المتغيرة">
+        <img class="img4"
+          src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80" alt="">
+        <h2 class="h4">مهارة إدارة الهدوء</h2>
+        <p class="p4">يتعلم الكشاف فن إدارة الهدوء في المواقف المختلفة، فيتمكّن من التحكم بعواطفه وردود أفعاله</p>
+        <button class="btn-sctionfuor">اعرف المزيد </button>
+      </div>
+      <div class="card4" data-title="أثر الكشاف" data-text="
+    
+    يتعلم الكشاف كيف يجمع بين الأفراد بروح الاحترام والتعاون،
+ويعمل على تعزيز الانسجام بينهم من خلال التواصل الفعّال والتفاعل الإيجابي.
+يعرف كيف يستمع للآخرين ويفهم احتياجاتهم ومواقفهم،
+ليتمكّن من بناء علاقات متينة قائمة على الثقة والتقدير المتبادل.
+تساعده هذه المهارة على قيادة الفرق الصغيرة أو الكبيرة بفاعلية،
+وتجعل من الكشاف شخصًا قادرًا على توحيد الجهود لتحقيق الأهداف المشتركة بروح جماعية.
+    ">
+        <img class="img4"
+          src="https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=800&q=80" alt="">
+        <h2 class="h4">مهارة ربط الناس ببعض</h2>
+        <p class="p4">يتعلم الكشاف كيف يجمع بين الأفراد بروح الاحترام والتعاون، ويعمل على تعزيز </p>
+        <button class="btn-sctionfuor">اعرف المزيد </button>
+
+      </div>
+
+      <div class="card4" data-title="التواضع الميداني" data-text="
+    يتعلم الكشاف قيمة التواضع في الميدان، ويقدّر دور كل فرد في الفريق بغض النظر عن خبرته أو مركزه.
+يُظهر الاحترام للجميع ويستمع لآرائهم، ويقدّم المساعدة دون انتظار التقدير أو الثناء.
+يدرك أن العمل الجماعي يعتمد على التعاون والتكافل، وأن القيادة الحقيقية تبدأ بالقدوة والتواضع.
+تجعل هذه المهارة الكشاف محبوبًا وموثوقًا بين زملائه،
+وتنمي قدرته على إدارة المواقف الصعبة بروح الفريق، مؤمنًا أن العظمة الحقيقية تكمن في الخدمة والتواضع على أرض الواقع.
+    
+    ">
+        <img class="img4"
+          src="https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=800&q=80" alt="">
+        <h2 class="h4">مهارة التواضع الميداني</h2>
+        <p class="p4">القائد الحقيقي هو أول من يخدم</p>
+        <button class="btn-sctionfuor">اعرف المزيد </button>
+      </div>
+
+      <div class="card4" data-title="البصمة الصامتة" data-text="يتعلم الكشاف كيف يترك أثرًا إيجابيًا في كل مكان يمرّ به دون الحاجة للظهور أو التباهي.
+يعتمد على أفعاله وسلوكه في التأثير على الآخرين وإلهامهم، سواء في العمل الجماعي أو الخدمة المجتمعية.
+يفهم أن القيادة لا تتطلب صوتًا عاليًا، بل تكمن في المسؤولية والقدوة والمبادرات الهادفة.
+تُنمّي هذه المهارة في الكشاف القدرة على العطاء المستمر بروح نقية،
+وتجعل منه فردًا يُقدّر ويُحتذى به من قبل زملائه والمجتمع، مؤمنًا أن البصمة الحقيقية هي تأثير الإنسان الصامت والمستمر">
+        <img class="img4"
+          src="https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=800&q=80" alt="">
+        <h2 class="h4">مهارة البصمة الصامتة</h2>
+        <p class="p4">دي المهارة اللي ما تتعلمش بالكلام</p>
+        <button class="btn-sctionfuor">اعرف المزيد </button>
+      </div>
+
+      <!-- card-sction -->
+    </div>
+
+    <div class="overlay" id="overlay">
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <div class="overlay-content">
+        <img id="overlayImg" src="" alt="">
+        <div class="text">
+          <h2 id="overlayTitle"></h2>
+          <p id="overlayText"></p>
+        </div>
+      </div>
+    </div>
+    <!-- section3 -->
+  </div>
+  <!-- section-five -->
+  <section class="church-section">
+    <div class="church-slider">
+      <img src="church/cover.jpg" class="active" alt="كنيسة 1">
+      <img src="church/Gemini_Generated_Image_33l8ab33l8ab33l8.png" alt="كنيسة 2">
+      <img src="church/Gemini_Generated_Image_8n30mu8n30mu8n30.png" alt="كنيسة 3">
+      <img src="church/WhatsApp Image 2025-10-16 at 11.33.30_5876f6c4.jpg" alt="كنيسة 4">
+    </div>
+
+    <div id="churchfive" class="church-text">
+      <h2>كنيسة الشهيد فيلوباتير مرقوريوس (أبى سيفين) والشهيدة دميانة</h2>
+      <p>
+        تأسست الكنيسة عام 1999 لخدمة المجتمع وتنمية الحياة الروحية والتعليمية.
+        تعتبر منارة إيمانية لأبناء بورسعيد، وتشمل العديد من الأنشطة الروحية والتعليمية والخدمية.
+      </p>
+      <button onclick="scrollMore()">اقرأ المزيد</button>
+
+      <div class="more-text" id="more-text">
+        <h3>نبذة كاملة عن الكنيسة</h3>
+        <p>
+          نبذة
+          عن كنيسة الشهيد فيلوباتير مرقوريوس (أبى سيفين ) والشهيدة دميانه ببورسعيد
+          صدر قرار المجلس التنفيذى لمحافظة بورسعيد ، برئاسة السيد اللواء /مصطفى ابراهيم صادق ، محافظ بورسعيد ، فى
+          27/9/1999 م بالموافقة على تخصيص قطعة أرض بالمنطقة 25 A بالزهور ، لإقامة كنيسة عليها .
+
+          صدر قرار المجلس التنفيذى لمحافظة بورسعيد ، برئاسة السيد الدكتور / مصطفى كامل ، محافظ بورسعيد ، رقم 66 لسنة
+          2000 م ،فى 21/8/2000 م ، بالموافقة على بناء كنيسة بالزهور منطقة بلال بن رباح بالمنطقة 25 A .
+
+          فوضت المطرانية القس مينا عبد الله ، لاستلام قطعة الأرض التى ستقام الكنيسة عليها . وتم استلام الأرض يوم الاثنين
+          الموافق 21/8/2000 م
+
+          صدر ترخيص بناء رقم 182 لسنة 2000/ 2001 م ، عن حى المناخ ، بإنشاء سور حول قطعة الأرض المخصصة لبناء الكنيسة .
+
+          صدر ترخيص بناء لسنة 2000/ 2001 م ، عن حى المناخ ، بإنشاء مبنى مؤقت من الجمالون قابل للفك والتركيب ، على قطعة
+          الأرض المخصصة لبناء الكنيسة .
+
+          رأس نيافة الحبر الجليل الأنبا تادرس أسقف بورسعيد خدمة أول قداس إلهى ، أقيم بالكنيسة المؤقتة ، واشترك فى خدمة
+          القداس الإلهى مجمع الآباء كهنة إيبارشية بورسعيد ، يوم السبت الموافق 30 ديسمبر لسنة 2000 م ، واستمرت خدمة
+          القداسات الإلهية بهذه الكنيسة يومياً ، حتى بناء الكنيسة الأساسية .
+
+          صدر قرار رئيس جمهورية مصر العربية رقم 141 لسنة 2002 م ، والذى صدر برئاسة الجمهورية فى 10 من يونيه لسنة 2002 م
+          ، ونشر بالجريدة الرسمية ، العدد 25 فى 20 من يونيه لسنة 2002 م ، بالترخيص لطائفة الأقباط الأرثوذكس ، بإقامة
+          كنيسة الشهيد أبى سيفين والقديسة دميانه وملحقاتها بحى الزهور بمحافظة بورسعيد .
+
+          صدر ترخيص بناء رقم 17 لسنة 2002/ 2003 م ، عن حى الزهور ، بإنشاء الكنيسة والمبانى .
+
+          بدأت أعمال الحفر يوم الأحد 10/8/2003 م .
+
+          بدأت أعمال الخرسانة العادية يوم الأربعاء 13/8/2003 م ، وتم وضع صندوق تذكارى بالخرسانة بيد نيافة الحبر جزيل
+          الاحترام الأنبا تادرس أسقف بورسعيد ، ويحتوى الصندوق على نسخة من الكتاب المقدس ، ونسخة من مجلة الكرازة ، وصليب
+          ، وبعض الصحف الصادرة صباح يوم الأربعاء 13/8/2003 م ، وبعض العملات المعدنية والورقية ، ووثيقة موقع عليها من
+          نيافة الأنبا تادرس.
+
+          صدر قرار المجلس التنفيذى لمحافظة بورسعيد ، برئاسة السيد اللواء / مصطفى عبد اللطيف ، محافظ بورسعيد ، بجلسة 24
+          مارس لسنة 2010 ، وأيضاً قرار المجلس الشعى المحلى لمحافظة بورسعيد بجلسة 30 مارس لسنة 2010م بضم قطعة الأرض
+          الملاصقة للحد القبلى للكنيسة لأرض الكنيسة ، دون المساس بالشارع الرئيسي القبلى .
+
+          فوضت المطرانية القمص مينا عبد الله لاستلام قطعة الأرض الملاصقة للحد القبلى للكنيسة ، وتم استلام الأرض يوم
+          الأربعاء 7/7/2010م
+
+          صدر ترخيص بناء رقم 37 لسنة 2010/2011 م ، عن حى الزهور لاستكمال مبانى الخدمات بالكنيسة (المبنى الشرقى و المبنى
+          القبلى ) .
+
+          كنيسة الشهيد أبى سيفين والشهيدة دميانة ، تضم الآتى :
+          + الكنيسة بالدور الأرضى ، وبها ثلاثة مذابح :
+
+          – المذبح الأوسط : بِاسم الشهيدة دميانه والأربعين عذراء الشهيدات .
+
+          – المذبح البحرى : بِاسم الأنبا بساده الأسقف والشهيد والقديس البابا كيرلس السادس
+
+          – المذبح القبلى : بِاسم القديس الأنبا شنوده رئيس المتوحدين .
+
+          + الكنيسة العلوية ، وبها ثلاثة مذابح :
+
+          – المذبح الأوسط : بِاسم الشهيد فيلوباتير مرقوريوس (أبي سيفين ) .
+
+          – المذبح البحرى : بِاسم الشهيد أبيماخوس الفرمى، والقديس إيسوذورس الفرمى .
+
+          – المذبح القبلى : بِاسم الشهيدة مارينا .
+
+          + مذبح بمبنى الخدمات البحرى ( الدور الثالث ) :
+
+          – بِاسم رئيس الملائكة ميخائيل ، والشهيد كرياكوس ويوليطه أمه .
+
+          – كنيسة بمبنى الخدمات الشرقى ( الدور الأول ) ، وبها ثلاثة مذابح :
+
+          – المذبح الأوسط : بِاسم السيدة العذراء والأنبا كاراس السائح .
+
+          – المذبح البحرى : بِاسم الشهيد أبسخيرون القلينى ، والشهيد الأنبا ونس .
+
+          – المذبح القبلى : بِاسم القديسين الأنبا أنطونيوس والأنبا بولا .
+
+          + الدور الأرضى بمبنى الخدمات الشرقى :
+
+          – قاعة للمناسبات (لتقبل العزاء ).
+
+          + مبانى الخدمات ( المبنى الشرقى ، والبحرى ، والقبلى ) : تضم أنشطة الكنيسة المختلفة :
+
+          – قاعة مناسبات.
+
+          – قاعة المسرح.
+
+          – قاعة طعام .
+
+          – فصول التربية الكنسية .
+
+          – فصول التقوية.
+
+          –بيت الأنبا كاراس للاستضافة والخلوات الروحية .
+
+          – مكتبة الشهيد أبانوب للطفل.
+
+          – ورشة الأمير تادرس للأعمال الفنية .
+
+          – كانتين .
+
+          – معرض منتجات الأديرة والكنائس .
+
+          – خدمات الكمبيوتر .
+
+          – الاتيليه –مكتبة البيع .
+
+          – الحضانة .
+
+          – معرض الملابس المستعملة .
+
+          – مركز وسائل الإيضاح .
+
+          الرب يبارك كل عمل لمجد اسمه القدوس ، وبنيان الكنيسة ، وخلاص النفوس ، بشفاعة شهداء وقديسي هذه الكنيسة ، وبصلوات
+          قداسة البابا المعظم الأنبا تواضروس الثانى ، وشريكة فى الخدمة الرسولية أبينا المطران المكرم الأنبا تادرس .
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  </div>
+  <hr>
+
+  <footer id="sectionseex" class="main-footer">
+    <div class="footer-container">
+      <!-- 🧩 العمود الأول -->
+      <div class="footer-column">
+        <h3>محاضرات كشفية</h3>
+        <ul>
+          <li><a href="#img-logo">الرئيسية</a></li>
+          <li><a href="M.ASHBAL.html">مرحلة اشبال</a></li>
+          <li><a href="M.mrshdat.html">مرحلة الفتيان</a></li>
+          <li><a href="M.elmt8dm.html">مرحلة المتقدم</a></li>
+          <li><a href="M.elgwala.html">مرحلة جوالة</a></li>
+          <li><a href="daleleelsharat.html">الشارات الكشفية</a></li>
+        </ul>
+      </div>
+
+      <!-- 🧩 العمود الثاني -->
+      <div class="footer-column">
+        <h3>المكتبة الكشفية</h3>
+        <ul>
+          <li><a href="liabarary.html">المكتبة</a></li>
+          <li><a href="bookone.html">الاشبال</a></li>
+          <li><a href="bookfour.html">الجوالة</a></li>
+          <li><a href="#">البرامج الكشفية</a></li>
+          <li><a href="bookthree.html">المتقدم</a></li>
+          <li><a href="#school">الخدمات التعليمية</a></li>
+          <li><a href="booktow.html">الفتيان</a></li>
+          <li><a href="#">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <!-- 🧩 العمود الثالث -->
+      <div class="footer-column">
+        <h3>روابط إضافية</h3>
+        <ul>
+          <li><a href="daleleelsharat.html">الكشافة</a></li>
+          <li><a href="#">مدارس الأحد</a></li>
+          <li><a href="https://alhqyq.com/news/s/9265">الفعاليات</a></li>
+          <li><a
+              href="https://scholar.google.com.eg/scholar?q=%D8%A7%D9%84%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1+%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A%D8%A9+%D8%B9%D9%86+%D8%A7%D9%84%D9%83%D8%B4%D8%A7%D9%81%D8%A9&hl=ar&as_sdt=0&as_vis=1&oi=scholart">الأخبار
+              المحلية</a></li>
+          <li><a href="el8dasat.html">مواعيد القداسات</a></li>
+        </ul>
+      </div>
+
+      <!-- 🧩 العمود الرابع (التواصل) -->
+      <div id="contact" class="footer-column contact-column">
+        <h3>تواصل معنا</h3>
+        <div class="social-icons">
+
+          <a href="fb://facewebmodal/f?href=https://www.facebook.com/share/176dYZT5kU/?mibextid=wwXIfr" onclick="
+     setTimeout(() => {
+       window.location = 'https://www.facebook.com/share/176dYZT5kU/?mibextid=wwXIfr';
+     }, 500);
+   " target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+
+
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+
+          <a id="whatsIcon" style="cursor:pointer;">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+
+
+          <a href="#" onclick="
+    window.location='tiktok://user?username=el_nasr.1';
+    setTimeout(() => { window.location='https://www.tiktok.com/@el_nasr.1'; }, 1000);
+    return false;">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+
+        </div>
+        <div class="contact-phone">
+          <p>📍 بورسعيد - الزهور</p>
+          <p>
+            <a style="text-decoration: none; color: aliceblue;"
+              href="https://wa.me/201009130645?text=ما%20هو%20استفسارك؟" target="_blank">
+              📞 01009130645
+            </a>
+          </p>
+          <!-- <p id="whatsappBtn" style="cursor:pointer;">
+            📞 01009130645
+          </p>
+          <p>☎️ 0660405050</p> -->
+
+          <a style="text-decoration: none;"
+            href="mailto:elnasrscot25@gmail.com?subject=استفسار%20كشفي&body=مرحبًا%20بك%20في%20الموقع%20الكشفي!%0A%0Aاكتب%20استفسارك%20هنا."
+            target="_blank">
+            <i class="fas fa-envelope"></i> راسلنا
+          </a>
+
+
+          <div class="earth" onclick="window.open('https://maps.app.goo.gl/ttm89V3VuDLDTTzY8', '_blank')"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <!-- ⚡ حقوق النشر -->
+    <div class="footer-bottom">
+      <p>© 2025 كنيسة الشهيد أبى سيفين والشهيدة دميانة - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+  <!-- logoresbonve -->
+  <script>
+    const logo = document.querySelector('.logoresbosive');
+    const link = document.getElementById('logo-link');
+
+    link.addEventListener('click', () => {
+      // وقف الحركة أول ما المستخدم يضغط
+      logo.style.animationPlayState = 'paused';
+    });
+  </script>
+  <!-- iconwhatsapp -->
+  <script>
+    document.getElementById("whatsIcon").onclick = function () {
+      let message = "مرحبًا بك في الموقع الكشفي! كيف نقدر نساعدك؟";
+      let encoded = encodeURIComponent(message);
+      window.open("https://wa.me/201009130645?text=" + encoded, "_blank");
+    };
+  </script>
+
+  <!-- number -->
+  <script>
+    document.getElementById("whatsappBtn").onclick = function () {
+      let message = "أهلاً بك، كيف نقدر نساعدك بخصوص الموقع أو أي خدمة كشفية؟";
+      let encoded = encodeURIComponent(message);
+      window.location.href = "https://wa.me/201009130645?text=" + encoded;
+    };
+  </script>
+  <!-- search page -->
+  <script>
+    // 🧭 قاعدة بيانات الصفحات والأقسام
+    const siteMapSearch = [
+      { name: "داليل الشارات", url: "daleleelsharat.html" },
+      { name: "الشارت", url: "daleleelsharat.html" },
+      { name: "شارة", url: "daleleelsharat.html" },
+      { name: "داليل", url: "daleleelsharat.html" },
+      { name: "مقدمة", url: "daleleelsharat.html#home" },
+      { name: "شارة راكب الدراجة", url: "daleleelsharat.html#section10" },
+      { name: "شارة رامي القوس والسهم", url: "daleleelsharat.html#section11" },
+      { name: "شارة السباح", url: "daleleelsharat.html#section12" },
+      { name: "شارة صياد السمك", url: "daleleelsharat.html#section13" },
+      { name: "شارة الفارس", url: "daleleelsharat.html#section14" },
+      { name: "شارة اللائق بدنيا", url: "daleleelsharat.html#section17" },
+      { name: "شارة هاوي الشطرنج", url: "daleleelsharat.html#section18" },
+      { name: "شارة الرحالة", url: "daleleelsharat.html#section19" },
+      { name: "شارة رسام الخرائط", url: "daleleelsharat.html#section20" },
+      { name: "شارة الطاهي", url: "daleleelsharat.html#section21" },
+
+      { name: "استفسارات", url: "astfsarat.html" },
+      { name: "مدخل إلى الكشفية", url: "bookfour.html" },
+      { name: "المكتبة", url: "liabarary.html" },
+      { name: "مواعيد القدسات", url: "el8dasat.html" },
+      { name: "محاضرات الاشبال", url: "M.ASHBAL.html" },
+      { name: "محاضرات الفتيان", url: "M.mrshdat.html" },
+      { name: "محاضرات مرحلة المتقدم", url: "M.elmt8dm.html" },
+      { name: "اتصل بنا", url: "Homescout.html#contact" },
+      { name: "كتاب الاشبال", url: "bookone.html" },
+      { name: "عن الكنيسة ", url: "Homescout.html#churchfive" },
+      { name: "شارة هاوي الشطرنج", url: "daleleelsharat.html#section18" },
+      { name: " الكنيسة ", url: "Homescout.html#churchfive" },
+      { name: "عن  ", url: "Homescout.html#churchfive" },
+      { name: "ابو سفين ", url: "Homescout.html#churchfive" },
+
+    ];
+
+    // 🧩 تعريف عناصر البحث الجديدة
+    const searchInputAlt = document.querySelector(".input-container input");
+    const resultsBoxAlt = document.createElement("div");
+    resultsBoxAlt.id = "searchResultsAlt";
+    resultsBoxAlt.style.cssText = `
+    position: absolute;
+    top: 55px;
+    right: 140px;
+    width: 50%;
+    background: #ffffff97;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 10;
+  `;
+    document.querySelector(".input-container").appendChild(resultsBoxAlt);
+
+    // 🔍 حدث الإدخال
+    searchInputAlt.addEventListener("input", function () {
+      const value = this.value.trim();
+      resultsBoxAlt.innerHTML = "";
+
+      if (value === "") {
+        resultsBoxAlt.style.display = "none";
+        return;
+      }
+
+      const filtered = siteMapSearch.filter(item =>
+        item.name.includes(value)
+      );
+
+      if (filtered.length === 0) {
+        resultsBoxAlt.innerHTML = "<div style='padding:10px'>لا توجد نتائج</div>";
+      } else {
+        filtered.forEach(item => {
+          const div = document.createElement("div");
+          div.textContent = item.name;
+          div.style.cssText = `
+          padding: 10px 15px;
+          cursor: pointer;
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+        `;
+          div.addEventListener("mouseenter", () => div.style.background = "#334155");
+          div.addEventListener("mouseleave", () => div.style.background = "transparent");
+          div.onclick = () => window.location.href = item.url;
+          resultsBoxAlt.appendChild(div);
+        });
+      }
+
+      resultsBoxAlt.style.display = "block";
+    });
+
+    // إخفاء النتائج لما تضغط بره
+    document.addEventListener("click", e => {
+      if (!e.target.closest(".input-container")) {
+        resultsBoxAlt.style.display = "none";
+      }
+    });
+
+  </script>
+  <!-- // اللعاب -->
+  <script>
+    function showMessage() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closeMessage() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+  <!-- التسجيل -->
+  <script>
+    function showJoinMsg(e) {
+      e.preventDefault();
+      document.getElementById("auth-title").textContent = "✅ تم التسجيل بنجاح";
+      document.getElementById("auth-text").textContent =
+        "تم تسجيلك في الموقع الكشفي بكنيسة الشهيد العظيم أبى سيفين و الشهيدة العفيفة دميانة ";
+      document.getElementById("auth-popup").style.display = "flex";
+    }
+
+    function showLoginMsg(e) {
+      e.preventDefault();
+      document.getElementById("auth-title").textContent = "ℹ️ تسجيل دخول";
+      document.getElementById("auth-text").textContent =
+        "لقد قمت بتسجيل الدخول من قبل";
+      document.getElementById("auth-popup").style.display = "flex";
+    }
+
+    function closeAuthPopup() {
+      document.getElementById("auth-popup").style.display = "none";
+    }
+  </script>
+  <!--  انشطة ورحلات -->
+  <script>
+    // لما المستخدم يضغط على اللينك
+    document.querySelector('a[href="#activities"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('activityPopup').style.display = 'flex';
+    });
+
+    // غلق النافذة
+    function closeActivityPopup() {
+      document.getElementById('activityPopup').style.display = 'none';
+    }
+
+    // لو ضغط برا البوكس تتقفل
+    window.addEventListener('click', function (e) {
+      const popup = document.getElementById('activityPopup');
+      if (e.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
+  </script>
+
+  <script src="backgrund.js"></script>
+  <script src="drop-navone.js"></script>
+  <script src="dropnavtow.js"></script>
+  <script src="slidecontent-nav.js"></script>
+  <script src="sectiontow.js"></script>
+  <script src="sectionthree.js"></script>
+  <script src="sectionfour.js"></script>
+  <script src="sectionfive.js"></script>
+  <script src="resbonsev.js"></script>
+</body>
+
+</html>

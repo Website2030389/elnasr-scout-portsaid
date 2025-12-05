@@ -1,0 +1,838 @@
+ @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+ * {
+     box-sizing: border-box;
+ }
+
+ body {
+     margin: 0;
+     font-family: "Cairo", sans-serif;
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .titleregister {
+     position: absolute;
+     text-align: center;
+     color: #ffcc00;
+     font-size: 60px;
+     margin-top: 120px;
+     font-weight: 900;
+     text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+ }
+
+ video.bg-video {
+     position: fixed;
+     right: 0;
+     bottom: 0;
+     width: 100%;
+     height: 10vh;
+     margin: 0;
+     padding: 0;
+     min-width: 100%;
+     min-height: 100%;
+     z-index: -1;
+     object-fit: cover;
+     filter: brightness(60%);
+ }
+
+ #badgeLink {
+     position: relative;
+     top: 20px;
+     right: 30px;
+     padding: 12px 25px;
+     background: rgba(255, 255, 255, 0.9);
+     color: #222;
+     font-weight: bold;
+     border-radius: 30px;
+     text-decoration: none;
+     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+     transition: all 0.3s ease;
+ }
+
+ #badgeLink:hover {
+     background: #ffcc00;
+     color: #000;
+ }
+
+ #slideWrap {
+     position: fixed;
+     top: 0;
+     right: -100%;
+     width: 100%;
+     height: 100%;
+     background: rgba(15, 15, 15, 0.8);
+     backdrop-filter: blur(10px);
+     transition: right 0.8s ease;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* ↓ ↓ دي التعديلات المهمة ↓ ↓ */
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     /* بدل center علشان يبدأ من فوق */
+     overflow-y: auto;
+     /* هنا التمرير العمودي */
+     padding: 40px 0;
+     /* مسافة فوق وتحت علشان الشكل ما يلزقش */
+     box-sizing: border-box;
+ }
+
+ #slideWrap.active {
+     right: 0;
+ }
+
+ #slide {
+     background: rgba(255, 255, 255, 0.1);
+     border-radius: 25px;
+     padding: 40px;
+     width: 450px;
+     height: auto;
+     box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+     color: #fff;
+     text-align: center;
+     animation: slideIn 0.8s ease;
+     transform: translate(5%, 1%) scale(0.7);
+     margin: auto;
+     /* علشان يفضل في النص عند التمرير */
+
+ }
+
+ @keyframes slideIn {
+     from {
+         transform: translateY(-30px);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ h2 {
+     font-size: 1.8em;
+     margin-bottom: 25px;
+     color: #ffcc00;
+ }
+
+ label {
+     display: block;
+     text-align: right;
+     margin: 15px 0 5px;
+     color: #fff;
+     font-weight: bold;
+ }
+
+ input {
+     width: 100%;
+     padding: 10px;
+     border-radius: 8px;
+     border: none;
+     outline: none;
+     font-size: 1em;
+     margin-bottom: 10px;
+ }
+
+ button[type="submit"] {
+     background: #ffcc00;
+     border: none;
+     padding: 10px 25px;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 1.1em;
+     transition: 0.3s;
+ }
+
+ button[type="submit"]:hover {
+     background: #ff9900;
+     transform: scale(1.05);
+ }
+
+ .close-btn {
+     background: crimson;
+     color: #fff;
+     border: none;
+     padding: 8px 15px;
+     border-radius: 10px;
+     cursor: pointer;
+     float: left;
+     font-weight: bold;
+     transition: 0.3s;
+ }
+
+ .close-btn:hover {
+     background: darkred;
+ }
+
+ .error {
+     color: #ff6666;
+     font-size: 0.9em;
+ }
+
+
+ .earth {
+     position: relative;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+     flex-direction: row-reverse;
+     width: 250px;
+     height: 250px;
+     top: 500px;
+     /* right: 40%; */
+     border-radius: 50%;
+     background: url("imgCurricula/earth-png-25613.png") no-repeat center/cover;
+     animation: spin 70s linear infinite;
+     cursor: pointer;
+     animation-direction: alternate-reverse;
+ }
+
+ @keyframes spin {
+     from {
+         transform: rotate(0deg);
+     }
+
+     to {
+         transform: rotate(-360deg);
+     }
+ }
+
+
+ @media (min-width: 300px) and (max-width: 600px) {
+     * {
+         box-sizing: border-box;
+     }
+
+     body {
+         margin: 0;
+         font-family: "Cairo", sans-serif;
+         width: 100%;
+         height: 100vh;
+         padding: 0;
+     }
+
+
+     .earth {
+         position: relative;
+         display: flex;
+         align-items: center;
+         text-align: center;
+         justify-content: center;
+         flex-direction: row-reverse;
+         width: 250px;
+         height: 250px;
+         top: 300px;
+
+         border-radius: 50%;
+         background: url("imgCurricula/earth-png-25613.png") no-repeat center/cover;
+         animation: spin 70s linear infinite;
+         cursor: pointer;
+         animation-direction: alternate-reverse;
+     }
+
+     @keyframes spin {
+         from {
+             transform: rotate(0deg);
+         }
+
+         to {
+             transform: rotate(-360deg);
+         }
+     }
+
+
+
+
+     .titleregister {
+         position: absolute;
+         text-align: center;
+         color: #ffcc00;
+         font-size: 20px;
+         margin-top: 120px;
+         font-weight: 900;
+
+         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+     }
+
+     #badgeLink {
+         position: relative;
+         top: 20px;
+         right: 10px;
+         padding: 12px 25px;
+         background: rgba(255, 255, 255, 0.9);
+         color: #222;
+         font-weight: bold;
+         border-radius: 30px;
+         text-decoration: none;
+         box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+         transition: all 0.3s ease;
+     }
+
+     video.bg-video {
+         position: fixed;
+         right: 0;
+         bottom: 0;
+         width: 100%;
+         height: 10vh;
+         margin: 0;
+         padding: 0;
+         min-width: 100%;
+         min-height: 100%;
+         z-index: -1;
+         object-fit: cover;
+         filter: brightness(60%);
+     }
+
+
+
+     #badgeLink:hover {
+         background: #ffcc00;
+         color: #000;
+     }
+
+     #slideWrap {
+         position: fixed;
+         top: 0;
+         right: -100%;
+         width: 100%;
+         height: 100%;
+         background: rgba(15, 15, 15, 0.8);
+         backdrop-filter: blur(10px);
+         transition: right 0.8s ease;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         /* ↓ ↓ دي التعديلات المهمة ↓ ↓ */
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         /* بدل center علشان يبدأ من فوق */
+         overflow-y: auto;
+         /* هنا التمرير العمودي */
+         padding: 40px 0;
+         /* مسافة فوق وتحت علشان الشكل ما يلزقش */
+         box-sizing: border-box;
+     }
+
+     #slideWrap.active {
+         right: 0;
+     }
+
+     #slide {
+         background: rgba(255, 255, 255, 0.1);
+         border-radius: 25px;
+         padding: 40px;
+         width: 100%;
+         height: auto;
+         box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+         color: #fff;
+         text-align: center;
+         animation: slideIn 0.8s ease;
+         transform: translate(5%, 1%) scale(0.7);
+         margin: auto;
+         /* علشان يفضل في النص عند التمرير */
+
+     }
+
+     @keyframes slideIn {
+         from {
+             transform: translateY(-1px);
+             opacity: 0;
+         }
+
+         to {
+             transform: translateY(0);
+             opacity: 1;
+         }
+     }
+
+     h2 {
+         font-size: 1.8em;
+         margin-bottom: 25px;
+         color: #ffcc00;
+     }
+
+     label {
+         display: block;
+         text-align: right;
+         margin: 15px 0 5px;
+         color: #fff;
+         font-weight: bold;
+     }
+
+     input {
+         width: 100%;
+         padding: 10px;
+         border-radius: 8px;
+         border: none;
+         outline: none;
+         font-size: 1em;
+         margin-bottom: 10px;
+     }
+
+     button[type="submit"] {
+         background: #ffcc00;
+         border: none;
+         padding: 10px 25px;
+         border-radius: 8px;
+         cursor: pointer;
+         font-size: 1.1em;
+         transition: 0.3s;
+     }
+
+     button[type="submit"]:hover {
+         background: #ff9900;
+         transform: scale(1.05);
+     }
+
+     .close-btn {
+         background: crimson;
+         color: #fff;
+         border: none;
+         padding: 8px 15px;
+         border-radius: 10px;
+         cursor: pointer;
+         float: left;
+         font-weight: bold;
+         transition: 0.3s;
+     }
+
+     .close-btn:hover {
+         background: darkred;
+     }
+
+     .error {
+         color: #ff6666;
+         font-size: 0.9em;
+     }
+
+
+ }
+
+
+ @media (min-width: 601px) and (max-width: 722px) {
+     * {
+         box-sizing: border-box;
+     }
+
+     body {
+         margin: 0;
+         font-family: "Cairo", sans-serif;
+         width: 100%;
+         height: 100vh;
+         padding: 0;
+     }
+
+
+     .earth {
+         position: relative;
+         display: flex;
+         align-items: center;
+         text-align: center;
+         justify-content: center;
+         flex-direction: row-reverse;
+         width: 250px;
+         height: 250px;
+         top: 300px;
+         border-radius: 50%;
+         background: url("imgCurricula/earth-png-25613.png") no-repeat center/cover;
+         animation: spin 70s linear infinite;
+         cursor: pointer;
+         animation-direction: alternate-reverse;
+     }
+
+     @keyframes spin {
+         from {
+             transform: rotate(0deg);
+         }
+
+         to {
+             transform: rotate(-360deg);
+         }
+     }
+
+
+
+
+     .titleregister {
+         position: absolute;
+         text-align: center;
+         color: #ffcc00;
+         font-size: 20px;
+         margin-top: 120px;
+         font-weight: 900;
+
+         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+     }
+
+     #badgeLink {
+         position: relative;
+         top: 20px;
+         right: 10px;
+         padding: 12px 25px;
+         background: rgba(255, 255, 255, 0.9);
+         color: #222;
+         font-weight: bold;
+         border-radius: 30px;
+         text-decoration: none;
+         box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+         transition: all 0.3s ease;
+     }
+
+     video.bg-video {
+         position: fixed;
+         right: 0;
+         bottom: 0;
+         width: 100%;
+         height: 10vh;
+         margin: 0;
+         padding: 0;
+         min-width: 100%;
+         min-height: 100%;
+         z-index: -1;
+         object-fit: cover;
+         filter: brightness(60%);
+     }
+
+
+
+     #badgeLink:hover {
+         background: #ffcc00;
+         color: #000;
+     }
+
+     #slideWrap {
+         position: fixed;
+         top: 0;
+         right: -100%;
+         width: 100%;
+         height: 100%;
+         background: rgba(15, 15, 15, 0.8);
+         backdrop-filter: blur(10px);
+         transition: right 0.8s ease;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         /* ↓ ↓ دي التعديلات المهمة ↓ ↓ */
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         /* بدل center علشان يبدأ من فوق */
+         overflow-y: auto;
+         /* هنا التمرير العمودي */
+         padding: 40px 0;
+         /* مسافة فوق وتحت علشان الشكل ما يلزقش */
+         box-sizing: border-box;
+     }
+
+     #slideWrap.active {
+         right: 0;
+     }
+
+     #slide {
+         background: rgba(255, 255, 255, 0.1);
+         border-radius: 25px;
+         padding: 40px;
+         width: 100%;
+         height: auto;
+         box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+         color: #fff;
+         text-align: center;
+         animation: slideIn 0.8s ease;
+         transform: translate(5%, 1%) scale(0.7);
+         margin: auto;
+         /* علشان يفضل في النص عند التمرير */
+
+     }
+
+     @keyframes slideIn {
+         from {
+             transform: translateY(-1px);
+             opacity: 0;
+         }
+
+         to {
+             transform: translateY(0);
+             opacity: 1;
+         }
+     }
+
+     h2 {
+         font-size: 1.8em;
+         margin-bottom: 25px;
+         color: #ffcc00;
+     }
+
+     label {
+         display: block;
+         text-align: right;
+         margin: 15px 0 5px;
+         color: #fff;
+         font-weight: bold;
+     }
+
+     input {
+         width: 100%;
+         padding: 10px;
+         border-radius: 8px;
+         border: none;
+         outline: none;
+         font-size: 1em;
+         margin-bottom: 10px;
+     }
+
+     button[type="submit"] {
+         background: #ffcc00;
+         border: none;
+         padding: 10px 25px;
+         border-radius: 8px;
+         cursor: pointer;
+         font-size: 1.1em;
+         transition: 0.3s;
+     }
+
+     button[type="submit"]:hover {
+         background: #ff9900;
+         transform: scale(1.05);
+     }
+
+     .close-btn {
+         background: crimson;
+         color: #fff;
+         border: none;
+         padding: 8px 15px;
+         border-radius: 10px;
+         cursor: pointer;
+         float: left;
+         font-weight: bold;
+         transition: 0.3s;
+     }
+
+     .close-btn:hover {
+         background: darkred;
+     }
+
+     .error {
+         color: #ff6666;
+         font-size: 0.9em;
+     }
+
+
+ }
+
+ @media (min-width: 722px) and (max-width: 1321px) {
+     * {
+         box-sizing: border-box;
+     }
+
+     body {
+         margin: 0;
+         font-family: "Cairo", sans-serif;
+         width: 100%;
+         height: 100vh;
+         padding: 0;
+     }
+
+
+     .earth {
+         position: relative;
+         display: flex;
+         align-items: center;
+         text-align: center;
+         justify-content: center;
+         flex-direction: row-reverse;
+         width: 250px;
+         height: 250px;
+         top: 300px;
+         border-radius: 50%;
+         background: url("imgCurricula/earth-png-25613.png") no-repeat center/cover;
+         animation: spin 70s linear infinite;
+         cursor: pointer;
+         animation-direction: alternate-reverse;
+     }
+
+     @keyframes spin {
+         from {
+             transform: rotate(0deg);
+         }
+
+         to {
+             transform: rotate(-360deg);
+         }
+     }
+
+
+
+
+     .titleregister {
+         position: absolute;
+         text-align: center;
+         color: #ffcc00;
+         font-size: 35px;
+         margin-top: 120px;
+         font-weight: 900;
+
+         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+     }
+
+     #badgeLink {
+         position: relative;
+         top: 20px;
+         right: 10px;
+         padding: 12px 25px;
+         background: rgba(255, 255, 255, 0.9);
+         color: #222;
+         font-weight: bold;
+         border-radius: 30px;
+         text-decoration: none;
+         box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+         transition: all 0.3s ease;
+     }
+
+     video.bg-video {
+         position: fixed;
+         right: 0;
+         bottom: 0;
+         width: 100%;
+         height: 10vh;
+         margin: 0;
+         padding: 0;
+         min-width: 100%;
+         min-height: 100%;
+         z-index: -1;
+         object-fit: cover;
+         filter: brightness(60%);
+     }
+
+
+
+     #badgeLink:hover {
+         background: #ffcc00;
+         color: #000;
+     }
+
+     #slideWrap {
+         position: fixed;
+         top: 0;
+         right: -100%;
+         width: 100%;
+         height: 100%;
+         background: rgba(15, 15, 15, 0.8);
+         backdrop-filter: blur(10px);
+         transition: right 0.8s ease;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         /* ↓ ↓ دي التعديلات المهمة ↓ ↓ */
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         /* بدل center علشان يبدأ من فوق */
+         overflow-y: auto;
+         /* هنا التمرير العمودي */
+         padding: 40px 0;
+         /* مسافة فوق وتحت علشان الشكل ما يلزقش */
+         box-sizing: border-box;
+     }
+
+     #slideWrap.active {
+         right: 0;
+     }
+
+     #slide {
+         background: rgba(255, 255, 255, 0.1);
+         border-radius: 25px;
+         padding: 40px;
+         width: 100%;
+         height: auto;
+         box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+         color: #fff;
+         text-align: center;
+         animation: slideIn 0.8s ease;
+         transform: translate(5%, 1%) scale(0.7);
+         margin: auto;
+         /* علشان يفضل في النص عند التمرير */
+
+     }
+
+     @keyframes slideIn {
+         from {
+             transform: translateY(-1px);
+             opacity: 0;
+         }
+
+         to {
+             transform: translateY(0);
+             opacity: 1;
+         }
+     }
+
+     h2 {
+         font-size: 1.8em;
+         margin-bottom: 25px;
+         color: #ffcc00;
+     }
+
+     label {
+         display: block;
+         text-align: right;
+         margin: 15px 0 5px;
+         color: #fff;
+         font-weight: bold;
+     }
+
+     input {
+         width: 100%;
+         padding: 10px;
+         border-radius: 8px;
+         border: none;
+         outline: none;
+         font-size: 1em;
+         margin-bottom: 10px;
+     }
+
+     button[type="submit"] {
+         background: #ffcc00;
+         border: none;
+         padding: 10px 25px;
+         border-radius: 8px;
+         cursor: pointer;
+         font-size: 1.1em;
+         transition: 0.3s;
+     }
+
+     button[type="submit"]:hover {
+         background: #ff9900;
+         transform: scale(1.05);
+     }
+
+     .close-btn {
+         background: crimson;
+         color: #fff;
+         border: none;
+         padding: 8px 15px;
+         border-radius: 10px;
+         cursor: pointer;
+         float: left;
+         font-weight: bold;
+         transition: 0.3s;
+     }
+
+     .close-btn:hover {
+         background: darkred;
+     }
+
+     .error {
+         color: #ff6666;
+         font-size: 0.9em;
+     }
+
+
+ }

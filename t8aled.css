@@ -1,0 +1,1164 @@
+  body {
+      background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+
+      font-family: "Cairo", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      perspective: 3000px;
+
+  }
+
+  .book {
+      width: 100%;
+      height: 50%;
+      background: #a7abaf44;
+      box-shadow: 0 30px 30px #888686;
+      display: flex;
+      overflow: hidden;
+      border-radius: 70px;
+      position: relative;
+      transform: translateZ(-18500px) scale(6);
+      transform-origin: center center;
+      transition: transform 0.8s ease;
+  }
+
+  .page {
+      flex: 1;
+      padding: 30px;
+      overflow: auto;
+      transition: 0.6s;
+      scroll-behavior: smooth;
+      cursor: grab;
+      display: none;
+      border: 10.5px double rgba(255, 255, 255, 0.986);
+      border-radius: 25%;
+
+  }
+
+  h2 {
+      position: relative;
+      width: 100%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      font-family: "Marhey", sans-serif;
+      color: rgb(16, 15, 15);
+      right: 550px;
+  }
+
+  .page.active {
+      display: block;
+  }
+
+  .page img {
+      width: 100%;
+      border-radius: 50px;
+      margin-top: 10px;
+      transition: all 0.4s ease;
+      display: block;
+  }
+
+  /* الزوم */
+  .zoom-controls {
+      position: relative;
+
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+  }
+
+  .zoom-controls button {
+      padding: 8px 16px;
+      margin: 5px;
+      border: none;
+      background: #6c757d;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+  }
+
+  .zoom-controls button:hover {
+      background: #5a6268;
+  }
+
+  button#prev,
+  button#next {
+      position: fixed;
+      top: 50%;
+      background: #fbfdff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 10;
+  }
+
+  #prev {
+      left: 17px;
+  }
+
+  #next {
+      right: 25px;
+  }
+
+  /* ✅ عرض الصور القادمة أسفل الكتاب */
+  .preview-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 15px;
+      height: 20%;
+  }
+
+  .preview-box {
+      width: 150px;
+      height: 100px;
+      border-radius: 80px;
+      overflow: hidden;
+      background: #222;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      transform: translateY(100%);
+      opacity: 0;
+      transition: transform 0.7s ease, opacity 0.7s ease;
+  }
+
+  .preview-box.show {
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+  .preview-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .titlebook {
+      position: relative;
+      color: white;
+      font-size: 60px;
+      opacity: 0;
+      transform: scale(0.5);
+      animation: zoomIn 1s forwards;
+      animation-delay: 0.5s;
+      font-family: "Marhey", sans-serif;
+  }
+
+  @keyframes zoomIn {
+      to {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+
+  #openBtn {
+      position: relative;
+      bottom: 120px;
+      right: 45%;
+      background: linear-gradient(180deg, #09d0b2, #e4e4e3);
+      border: none;
+      color: rgb(17, 16, 16);
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s;
+      z-index: 1000;
+  }
+
+  #openBtn:hover {
+      color: #f8f1f1;
+      background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+  }
+
+  #openBtn .icon {
+      background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+      border-radius: 50%;
+      color: #000000;
+      width: 40px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+  }
+
+  #openBtn:hover .icon {
+      transform: rotate(90deg);
+
+  }
+
+  .offcanvas {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100%;
+      background: #22222292;
+      color: white;
+      box-shadow: -3px 0 10px rgba(0, 0, 0, 0.4);
+      transition: right 0.4s ease;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .offcanvas.open {
+      right: 0;
+  }
+
+  .offcanvas-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #22222275;
+
+      padding: 15px;
+      border-bottom: 2px solid #555;
+  }
+
+  .offcanvas-header h5 {
+      margin: 0;
+      font-size: 18px;
+  }
+
+  .closeBtn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+  }
+
+  .offcanvas-body {
+      padding: 20px;
+      flex-grow: 1;
+      overflow-y: auto;
+  }
+
+  .offcanvas-body a {
+      display: block;
+      color: #00d4ff;
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: bold;
+      transition: 0.3s;
+  }
+
+  .offcanvas-body a:hover {
+      color: yellow;
+      transform: translateX(-5px);
+  }
+
+  #backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 999;
+  }
+
+  #backdrop.show {
+      display: block;
+  }
+
+  @media (min-width:300px) and (max-width:600px) {
+
+
+      body {
+          background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+
+          font-family: "Cairo", sans-serif;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          width: 94%;
+          margin: 0;
+          perspective: 3000px;
+      }
+
+      .book {
+          width: 70%;
+          height: 70%;
+          background: #a7abaf44;
+          box-shadow: 0 10px 30px #888686;
+          display: flex;
+          overflow: hidden;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          border-radius: 10px;
+          position: relative;
+          transform: translateZ(-5000px) scale(3.5);
+          transform-origin: center;
+          transition: transform 0.8s ease;
+          margin-right: 50px;
+      }
+
+      .page {
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          padding: 2px;
+          overflow: auto;
+          transition: 0.6s;
+          scroll-behavior: smooth;
+          cursor: grab;
+          display: none;
+          border: 0.5px double rgba(255, 255, 255, 0);
+          border-radius: 5%;
+
+      }
+
+      h2 {
+          position: relative;
+          width: 100%;
+          display: flex;
+          text-align: center;
+          align-items: center;
+          font-family: "Marhey", sans-serif;
+          color: rgb(16, 15, 15);
+          right: 60px;
+          font-size: 20px;
+      }
+
+      .titlebook {
+          position: relative;
+          color: white;
+          font-size: 30px;
+          opacity: 0;
+          transform: scale(0.5);
+          animation: zoomIn 1s forwards;
+          animation-delay: 0.5s;
+          font-family: "Marhey", sans-serif;
+      }
+
+      .page.active {
+          display: block;
+      }
+
+      .page img {
+          width: 100%;
+          border-radius: 25px;
+          margin-top: 5px;
+          transition: all 0.4s ease;
+          display: block;
+          border: 1px solid black;
+
+      }
+
+      /* الزوم */
+      .zoom-controls {
+          position: relative;
+
+          background: rgba(255, 255, 255, 0.1);
+          padding: 10px 20px;
+          border-radius: 12px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          z-index: 100;
+      }
+
+      .zoom-controls button {
+          padding: 8px 16px;
+          margin: 5px;
+          border: none;
+          background: #6c757d;
+          color: white;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background 0.3s;
+      }
+
+      .zoom-controls button:hover {
+          background: #5a6268;
+      }
+
+      button#prev,
+      button#next {
+          position: fixed;
+          top: 50%;
+          background: #fbfdff;
+          color: white;
+          border: none;
+          padding: 10px;
+          border-radius: 10px;
+          cursor: pointer;
+          z-index: 10;
+      }
+
+      #prev {
+          left: 17px;
+      }
+
+      #next {
+          right: 25px;
+      }
+
+      /* ✅ عرض الصور القادمة أسفل الكتاب */
+      .preview-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          margin-top: 5px;
+          height: 20%;
+      }
+
+      .preview-box {
+          width: 80px;
+          height: 100px;
+          border-radius: 10px;
+          overflow: hidden;
+          background: #222;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          transform: translateY(100%);
+          opacity: 0;
+          transition: transform 0.7s ease, opacity 0.7s ease;
+      }
+
+      .preview-box.show {
+          transform: translateY(0);
+          opacity: 1;
+      }
+
+      .preview-box img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+
+
+
+      @keyframes zoomIn {
+          to {
+              opacity: 1;
+              transform: scale(1);
+          }
+      }
+
+      #openBtn {
+          position: relative;
+          bottom: 80px;
+          right: 45%;
+          background: linear-gradient(180deg, #09d0b2, #e4e4e3);
+          border: none;
+          color: rgb(17, 16, 16);
+          padding: 10px 15px;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: all 0.3s;
+          z-index: 1000;
+          width: 60px;
+          height: 40px;
+      }
+
+      #openBtn:hover {
+          color: #f8f1f1;
+          background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+      }
+
+      #openBtn .icon {
+          background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+          border-radius: 50%;
+          color: #000000;
+          width: 40px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s;
+      }
+
+      #openBtn:hover .icon {
+          transform: rotate(90deg);
+
+      }
+
+      .offcanvas {
+          position: fixed;
+          top: 0;
+          right: -300px;
+          width: 250px;
+          height: 100%;
+          background: #22222292;
+          color: white;
+          box-shadow: -3px 0 10px rgba(0, 0, 0, 0.4);
+          transition: right 0.4s ease;
+          z-index: 1000;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .offcanvas.open {
+          right: 0;
+      }
+
+      .offcanvas-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: #22222275;
+
+          padding: 15px;
+          border-bottom: 2px solid #555;
+      }
+
+      .offcanvas-header h5 {
+          margin: 0;
+          font-size: 18px;
+      }
+
+      .closeBtn {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 22px;
+          cursor: pointer;
+      }
+
+      .offcanvas-body {
+          padding: 20px;
+          flex-grow: 1;
+          overflow-y: auto;
+      }
+
+      .offcanvas-body a {
+          display: block;
+          color: #00d4ff;
+          text-decoration: none;
+          margin: 10px 0;
+          font-weight: bold;
+          transition: 0.3s;
+      }
+
+      .offcanvas-body a:hover {
+          color: yellow;
+          transform: translateX(-5px);
+      }
+
+      #backdrop {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.5);
+          display: none;
+          z-index: 999;
+      }
+
+      #backdrop.show {
+          display: block;
+      }
+  }
+
+
+
+  @media (min-width:601px) and (max-width:1000px) {
+
+
+      body {
+          background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+
+          font-family: "Cairo", sans-serif;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 120vh;
+          width: 94%;
+          margin: 0;
+          perspective: 3000px;
+      }
+
+      .book {
+          width: 70%;
+          height: 90%;
+          background: #a7abaf44;
+          box-shadow: 0 10px 30px #888686;
+          display: flex;
+          overflow: hidden;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          border-radius: 10px;
+          position: relative;
+          transform: translateZ(-5000px) scale(3.5);
+          transform-origin: center;
+          transition: transform 0.8s ease;
+          margin-right: 50px;
+      }
+
+      .page {
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          padding: 2px;
+          overflow: auto;
+          transition: 0.6s;
+          scroll-behavior: smooth;
+          cursor: grab;
+          display: none;
+          border: 0.5px double rgba(255, 255, 255, 0);
+          border-radius: 5%;
+
+      }
+
+      h2 {
+          position: relative;
+          width: 100%;
+          display: flex;
+          text-align: center;
+          align-items: center;
+          font-family: "Marhey", sans-serif;
+          color: rgb(16, 15, 15);
+          right: 60px;
+          font-size: 20px;
+      }
+
+      .titlebook {
+          position: relative;
+          color: white;
+          font-size: 30px;
+          opacity: 0;
+          transform: scale(0.5);
+          animation: zoomIn 1s forwards;
+          animation-delay: 0.5s;
+          font-family: "Marhey", sans-serif;
+      }
+
+      .page.active {
+          display: block;
+      }
+
+      .page img {
+          width: 100%;
+          border-radius: 25px;
+          margin-top: 5px;
+          transition: all 0.4s ease;
+          display: block;
+          border: 1px solid black;
+
+      }
+
+      /* الزوم */
+      .zoom-controls {
+          position: relative;
+
+          background: rgba(255, 255, 255, 0.1);
+          padding: 10px 20px;
+          border-radius: 12px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          z-index: 100;
+      }
+
+      .zoom-controls button {
+          padding: 8px 16px;
+          margin: 5px;
+          border: none;
+          background: #6c757d;
+          color: white;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background 0.3s;
+      }
+
+      .zoom-controls button:hover {
+          background: #5a6268;
+      }
+
+      button#prev,
+      button#next {
+          position: fixed;
+          top: 50%;
+          background: #fbfdff;
+          color: white;
+          border: none;
+          padding: 10px;
+          border-radius: 10px;
+          cursor: pointer;
+          z-index: 10;
+      }
+
+      #prev {
+          left: 17px;
+      }
+
+      #next {
+          right: 25px;
+      }
+
+      /* ✅ عرض الصور القادمة أسفل الكتاب */
+      .preview-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          margin-top: 5px;
+          height: 20%;
+      }
+
+      .preview-box {
+          width: 150px;
+          height: 100px;
+          border-radius: 10px;
+          overflow: hidden;
+          background: #222;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          transform: translateY(100%);
+          opacity: 0;
+          transition: transform 0.7s ease, opacity 0.7s ease;
+      }
+
+      .preview-box.show {
+          transform: translateY(0);
+          opacity: 1;
+      }
+
+      .preview-box img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+
+
+
+      @keyframes zoomIn {
+          to {
+              opacity: 1;
+              transform: scale(1);
+          }
+      }
+
+      #openBtn {
+          position: relative;
+          bottom: 80px;
+          right: 45%;
+          background: linear-gradient(180deg, #09d0b2, #e4e4e3);
+          border: none;
+          color: rgb(17, 16, 16);
+          padding: 10px 15px;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: all 0.3s;
+          z-index: 1000;
+          width: 60px;
+          height: 40px;
+      }
+
+      #openBtn:hover {
+          color: #f8f1f1;
+          background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+      }
+
+      #openBtn .icon {
+          background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+          border-radius: 50%;
+          color: #000000;
+          width: 40px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s;
+      }
+
+      #openBtn:hover .icon {
+          transform: rotate(90deg);
+
+      }
+
+      .offcanvas {
+          position: fixed;
+          top: 0;
+          right: -300px;
+          width: 250px;
+          height: 100%;
+          background: #22222292;
+          color: white;
+          box-shadow: -3px 0 10px rgba(0, 0, 0, 0.4);
+          transition: right 0.4s ease;
+          z-index: 1000;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .offcanvas.open {
+          right: 0;
+      }
+
+      .offcanvas-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: #22222275;
+
+          padding: 15px;
+          border-bottom: 2px solid #555;
+      }
+
+      .offcanvas-header h5 {
+          margin: 0;
+          font-size: 18px;
+      }
+
+      .closeBtn {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 22px;
+          cursor: pointer;
+      }
+
+      .offcanvas-body {
+          padding: 20px;
+          flex-grow: 1;
+          overflow-y: auto;
+      }
+
+      .offcanvas-body a {
+          display: block;
+          color: #00d4ff;
+          text-decoration: none;
+          margin: 10px 0;
+          font-weight: bold;
+          transition: 0.3s;
+      }
+
+      .offcanvas-body a:hover {
+          color: yellow;
+          transform: translateX(-5px);
+      }
+
+      #backdrop {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.5);
+          display: none;
+          z-index: 999;
+      }
+
+      #backdrop.show {
+          display: block;
+      }
+  }
+
+  @media (min-width:1001px) and (max-width:1321px) {
+
+
+      body {
+          background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+
+          font-family: "Cairo", sans-serif;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 140vh;
+          width: 94%;
+          margin: 0;
+          perspective: 3000px;
+      }
+
+      .book {
+          width: 70%;
+          height: 90%;
+          background: #a7abaf44;
+          box-shadow: 0 10px 30px #888686;
+          display: flex;
+          overflow: hidden;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          border-radius: 10px;
+          position: relative;
+          transform: translateZ(-5000px) scale(3.5);
+          transform-origin: center;
+          transition: transform 0.8s ease;
+          margin-right: 50px;
+      }
+
+      .page {
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          padding: 2px;
+          overflow: auto;
+          transition: 0.6s;
+          scroll-behavior: smooth;
+          cursor: grab;
+          display: none;
+          border: 0.5px double rgba(255, 255, 255, 0);
+          border-radius: 5%;
+
+      }
+
+      h2 {
+          position: relative;
+          width: 100%;
+          display: flex;
+          text-align: center;
+          align-items: center;
+          font-family: "Marhey", sans-serif;
+          color: rgb(16, 15, 15);
+          right: 60px;
+          font-size: 20px;
+      }
+
+      .titlebook {
+          position: relative;
+          color: white;
+          font-size: 30px;
+          opacity: 0;
+          transform: scale(0.5);
+          animation: zoomIn 1s forwards;
+          animation-delay: 0.5s;
+          font-family: "Marhey", sans-serif;
+      }
+
+      .page.active {
+          display: block;
+      }
+
+      .page img {
+          width: 100%;
+          border-radius: 25px;
+          margin-top: 5px;
+          transition: all 0.4s ease;
+          display: block;
+          border: 1px solid black;
+
+      }
+
+      /* الزوم */
+      .zoom-controls {
+          position: relative;
+
+          background: rgba(255, 255, 255, 0.1);
+          padding: 10px 20px;
+          border-radius: 12px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          z-index: 100;
+      }
+
+      .zoom-controls button {
+          padding: 8px 16px;
+          margin: 5px;
+          border: none;
+          background: #6c757d;
+          color: white;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background 0.3s;
+      }
+
+      .zoom-controls button:hover {
+          background: #5a6268;
+      }
+
+      button#prev,
+      button#next {
+          position: fixed;
+          top: 50%;
+          background: #fbfdff;
+          color: white;
+          border: none;
+          padding: 10px;
+          border-radius: 10px;
+          cursor: pointer;
+          z-index: 10;
+      }
+
+      #prev {
+          left: 17px;
+      }
+
+      #next {
+          right: 25px;
+      }
+
+      /* ✅ عرض الصور القادمة أسفل الكتاب */
+      .preview-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          margin-top: 5px;
+          height: 20%;
+      }
+
+      .preview-box {
+          width: 150px;
+          height: 100px;
+          border-radius: 10px;
+          overflow: hidden;
+          background: #222;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          transform: translateY(100%);
+          opacity: 0;
+          transition: transform 0.7s ease, opacity 0.7s ease;
+      }
+
+      .preview-box.show {
+          transform: translateY(0);
+          opacity: 1;
+      }
+
+      .preview-box img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+
+
+
+      @keyframes zoomIn {
+          to {
+              opacity: 1;
+              transform: scale(1);
+          }
+      }
+
+      #openBtn {
+          position: relative;
+          bottom: 80px;
+          right: 45%;
+          background: linear-gradient(180deg, #09d0b2, #e4e4e3);
+          border: none;
+          color: rgb(17, 16, 16);
+          padding: 10px 15px;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: all 0.3s;
+          z-index: 1000;
+          width: 60px;
+          height: 40px;
+      }
+
+      #openBtn:hover {
+          color: #f8f1f1;
+          background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+      }
+
+      #openBtn .icon {
+          background: linear-gradient(180deg, #09d0b2e1, #e4e4e3);
+          border-radius: 50%;
+          color: #000000;
+          width: 40px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s;
+      }
+
+      #openBtn:hover .icon {
+          transform: rotate(90deg);
+
+      }
+
+      .offcanvas {
+          position: fixed;
+          top: 0;
+          right: -300px;
+          width: 250px;
+          height: 100%;
+          background: #22222292;
+          color: white;
+          box-shadow: -3px 0 10px rgba(0, 0, 0, 0.4);
+          transition: right 0.4s ease;
+          z-index: 1000;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .offcanvas.open {
+          right: 0;
+      }
+
+      .offcanvas-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: #22222275;
+
+          padding: 15px;
+          border-bottom: 2px solid #555;
+      }
+
+      .offcanvas-header h5 {
+          margin: 0;
+          font-size: 18px;
+      }
+
+      .closeBtn {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 22px;
+          cursor: pointer;
+      }
+
+      .offcanvas-body {
+          padding: 20px;
+          flex-grow: 1;
+          overflow-y: auto;
+      }
+
+      .offcanvas-body a {
+          display: block;
+          color: #00d4ff;
+          text-decoration: none;
+          margin: 10px 0;
+          font-weight: bold;
+          transition: 0.3s;
+      }
+
+      .offcanvas-body a:hover {
+          color: yellow;
+          transform: translateX(-5px);
+      }
+
+      #backdrop {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.5);
+          display: none;
+          z-index: 999;
+      }
+
+      #backdrop.show {
+          display: block;
+      }
+  }

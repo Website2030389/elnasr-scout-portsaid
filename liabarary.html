@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title> المكتبة الكشفية</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="libararystyle.css">
+  <!-- googel font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Sans+Hegarty&family=Badeen+Display&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Delicious+Handrawn&family=Gravitas+One&family=Lalezar&family=Marhey:wght@300..700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Oi&family=Playwrite+AU+TAS:wght@269&family=Vazirmatn:wght@100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    .book-popup {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      justify-content: center;
+      align-items: center;
+      z-index: 15000;
+    }
+
+    .book-popup-content {
+      background: linear-gradient(180deg, #fffaf0, #f7e9c5);
+      color: #5c4300;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      padding: 30px 40px;
+      width: 320px;
+      animation: bookFadeIn 0.4s ease;
+    }
+
+    .book-popup-content h2 {
+      margin-bottom: 10px;
+      color: #8b6b00;
+    }
+
+    .book-popup-content button {
+      margin-top: 20px;
+      background: linear-gradient(180deg, #f6e7b1, #edd08a);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #5c4300;
+      transition: 0.3s;
+    }
+
+    .book-popup-content button:hover {
+      background: linear-gradient(180deg, #edd08a, #f6e7b1);
+      transform: scale(1.05);
+    }
+
+    @keyframes bookFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title-libarary">Scout Library</h1>
+
+
+  <div class="nav_bar" id="navBar">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3_h"></div>
+    <div class="bar4"></div>
+  </div>
+
+  <!-- القائمة المنبثقة -->
+  <div class="overlay" id="overlay"></div>
+  <div class="side_menu" id="sideMenu">
+
+
+    <a class="bar-rigth" href="Homescout.html">🏠 الصفحة الرئيسية</a>
+    <a class="bar-rigth" href="bookone.html"> كتاب مرحلة الاشبال</a>
+    <a class="bar-rigth" href="booktow.html"> كتاب كشافة و مرشدات </a>
+    <a class="bar-rigth" href="bookthree.html">كتاب مرحلة المتقدم</a>
+    <a class="bar-rigth" href="bookfour.html">كتاب مرحلة جوالة</a>
+    <a class="bar-rigth" href="M.ASHBAL.html">محاضرات لمرحلة الاشبال</a>
+    <a class="bar-rigth" href="M.mrshdat.html">محاضرات لمرحلة الفتيان</a>
+    <a class="bar-rigth" href="M.elmt8dm.html">محاضرات لمرحلة المتقدم </a>
+    <a class="bar-rigth" href="M.elgwala.html">محاضرات لمرحلة الجوالة </a>
+    <a class="bar-rigth" href="daleleelsharat.html">دليل الشارات</a>
+    <a class="bar-rigth" href="liabarary.html">المكتبة التعلمية</a>
+    <a class="bar-rigth" href="Homescout.html#school"> ابدا التعليم </a>
+    <a class="bar-rigth" href="Homescout.html#churchfive">عن الكنيسة</a>
+    <a class="bar-rigth" href="el8dasat.html">مواعيد القدسات</a>
+    <a class="bar-rigth" href="Homescout.html#sct2"> من نحن</a>
+    <a class="bar-rigth" href="Homescout.html#sectionseex">تواصل معانا</a>
+
+
+  </div>
+
+  <ul>
+
+    <li>
+      <a href="bookone.html">
+        <img class="img1" src="book/cover.png" alt="">
+      </a>
+    </li>
+
+
+    <li>
+      <a href="booktow.html">
+        <img class="img1" src="book/Generated Image October 29, 2025 - 12_47PM.png" alt="">
+      </a>
+    </li>
+
+
+    <li>
+      <a href="bookthree.html">
+        <img class="img1" src="book/Generated Image October 29, 2025 - 1_20PM.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="bookfour.html">
+        <img class="img1" src="book/Generated Image October 29, 2025 - 1_28PM5555555.png" alt="">
+      </a>
+    </li>
+
+    <li><a href="#" id="book1" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 1_20PM.png" alt=""></a></li>
+    <li><a href="#" id="book2" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 1_20PM.png" alt=""></a></li>
+    <li><a href="#" id="book3" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 12_47PM.png" alt=""></a></li>
+    <li><a href="#" id="book4" onclick="showBookMsg(event)"><img class="img1" src="book/cover.png" alt=""></a></li>
+    <li><a href="#" id="book5" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 1_28PM5555555.png" alt=""></a></li>
+    <li><a href="#" id="book6" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 1_28PM5555555.png" alt=""></a></li>
+    <li><a href="#" id="book7" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 12_47PM.png" alt=""></a></li>
+    <li><a href="#" id="book8" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 1_20PM.png" alt=""></a></li>
+    <li><a href="#" id="book9" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 1_28PM5555555.png" alt=""></a></li>
+    <li><a href="#" id="book10" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 12_47PM.png" alt=""></a></li>
+    <li><a href="#" id="book11" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 1_28PM5555555.png" alt=""></a></li>
+    <li><a href="#" id="book12" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 12_47PM.png" alt=""></a></li>
+    <li><a href="#" id="book13" onclick="showBookMsg(event)"><img class="img1" src="book/cover.png" alt=""></a></li>
+    <li><a href="#" id="book14" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 1_20PM.png" alt=""></a></li>
+    <li><a href="#" id="book15" onclick="showBookMsg(event)"><img class="img1" src="book/cover.png" alt=""></a></li>
+    <li><a href="#" id="book16" onclick="showBookMsg(event)"><img class="img1"
+          src="book/Generated Image October 29, 2025 - 1_28PM5555555.png" alt=""></a></li>
+
+
+    <div id="book-popup" class="book-popup">
+      <div class="book-popup-content">
+        <h2>📘 إشعار</h2>
+        <p>برجاء الرجوع للقائد لفتح هذا الكتاب </p>
+        <button onclick="closeBookMsg()">إغلاق</button>
+      </div>
+    </div>
+
+
+  </ul>
+
+  <script>
+    function showBookMsg(e) {
+      e.preventDefault();
+      document.getElementById('book-popup').style.display = 'flex';
+    }
+
+    function closeBookMsg() {
+      document.getElementById('book-popup').style.display = 'none';
+    }
+  </script>
+  <script src="libararymine.js"></script>
+</body>
+
+</html>

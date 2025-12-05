@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل </title>
+  <link rel="stylesheet" href="registerlog.css">
+</head>
+
+<body>
+  <h1 class="titleregister">
+    الصفحة الرسمية لمجموعة النصر الكشفية بكنيسة الشهيد العظيم أبو سفين والقديسة العفيفة دميانة ببورسعيد
+  </h1>
+  <a href="#" id="badgeLink">تسجيل جديد</a>
+
+  <div></div>
+  <div class="earth" onclick="window.open('https://maps.app.goo.gl/ttm89V3VuDLDTTzY8', '_blank')"></div>
+
+  <video autoplay playsinline muted loop class="bg-video">
+    <source src="video/9292898-uhd_4096_2160_25fps.mp4" type="video/mp4">
+
+
+  </video>
+
+
+
+  <div id="slideWrap">
+    <div id="slide">
+      <button id="closeSlide" class="close-btn">إغلاق</button>
+      <h2>تسجيل جديد</h2>
+      <form id="regForm" method="POST" target="hidden_iframe"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSflSor0pB_YHcv8vEth-ki0MaNKNgZ6OtmSZ54F3G_lJeRQiA/formResponse">
+
+        <label>الاسم الكامل</label>
+        <input type="text" name="entry.1063937974" id="fullname" required placeholder="الاسم الكامل">
+
+        <label>المرحلة</label>
+        <input type="text" name="entry.298558280" id="level" required placeholder="المرحلة">
+
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="entry.1208341909" id="email" required placeholder="البريد الإلكتروني">
+
+        <label>رقم الهاتف</label>
+        <input type="tel" name="entry.1742835519" id="phone" required placeholder="رقم الهاتف">
+
+
+        <label>كلمة المرور</label>
+        <input type="password" id="password" name="entry.1458373613" required placeholder="كلمة المرور">
+
+        <label>تأكيد كلمة المرور</label>
+        <input type="password" id="confirmPassword" name="entry.1299004840" required placeholder="تأكيد كلمة المرور">
+
+        <p id="errorMsg" class="error"></p>
+
+        <button type="submit">إرسال التسجيل</button>
+      </form>
+
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+    </div>
+  </div>
+
+  <script>
+      // أول حاجة: تحقق إذا كان المستخدم مسجل مسبقاً
+  const savedUser = localStorage.getItem("registered_badge_form_v3");
+
+  if (savedUser) {
+    const user = JSON.parse(savedUser);
+    alert(`أهلاً ${user.fullname}! أنت مسجل بالفعل.`);
+    // تحويل المستخدم مباشرة للصفحة الرئيسية
+    window.location.href = "Homescout.html";
+  }
+
+    const badgeLink = document.getElementById('badgeLink');
+    const slideWrap = document.getElementById('slideWrap');
+    const closeBtn = document.getElementById('closeSlide');
+    const regForm = document.getElementById('regForm');
+    const errorMsg = document.getElementById('errorMsg');
+
+    badgeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      slideWrap.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      slideWrap.classList.remove('active');
+    });
+
+    regForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // منع الإرسال الافتراضي مؤقتًا
+      errorMsg.textContent = "";
+
+      const fullname = document.getElementById("fullname").value.trim();
+      const level = document.getElementById("level").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      // التحقق من الاسم
+      if (fullname.length < 10) {
+        errorMsg.textContent = 'الاسم الكامل يجب أن يحتوي على 10 أحرف على الأقل.';
+        document.getElementById("fullname").focus();
+        return;
+      }
+
+      // التحقق من المرحلة
+      const allowedLevels = ['أشبال', 'اشبال', 'كشافة و مرشدات', 'متقدم', 'جوالة', 'قائد', 'قائدة', 'قاىد'];
+      if (!allowedLevels.includes(level)) {
+        errorMsg.textContent = 'المرحلة غير صحيحة.';
+        document.getElementById("level").focus();
+        return;
+      }
+
+      // البريد الإلكتروني
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errorMsg.textContent = 'البريد الإلكتروني غير صالح.';
+        document.getElementById("email").focus();
+        return;
+      }
+
+      // رقم الهاتف
+      if (!/^\d{11}$/.test(phone)) {
+        errorMsg.textContent = 'رقم الهاتف يجب أن يحتوي على 11 رقم.';
+        document.getElementById("phone").focus();
+        return;
+      }
+
+      // كلمة المرور
+      if (password.length < 8) {
+        errorMsg.textContent = 'كلمة المرور يجب أن تحتوي على 8 أحرف على الأقل.';
+        document.getElementById("password").focus();
+        return;
+      }
+      if (password !== confirmPassword) {
+        errorMsg.textContent = 'كلمة المرور وتأكيدها غير متطابقين.';
+        document.getElementById("confirmPassword").focus();
+        return;
+      }
+
+      // حفظ البيانات في localStorage
+      const userData = { fullname, level, email, phone };
+      localStorage.setItem("registered_badge_form_v3", JSON.stringify(userData));
+
+      // إرسال النموذج عبر iframe بدون تجاوز المستمعين
+      regForm.submit();
+
+      alert("تم إرسال التسجيل بنجاح!");
+      regForm.reset();
+      slideWrap.classList.remove('active');
+
+      setTimeout(() => {
+        window.location.href = "Homescout.html";
+      }, 800);
+    });
+  </script>
+
+
+</body>
+
+</html>
