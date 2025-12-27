@@ -9,6 +9,15 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 
+  <script>
+    const LOCALSTORAGE_KEY = "registered_badge_form_v3";
+
+    // تحقق إذا المستخدم مسجل
+    const saved = localStorage.getItem(LOCALSTORAGE_KEY);
+    if (!saved) {
+      // لو مش مسجل، ارجع المستخدم لصفحة التسجيل
+      window.location.href = "index.html";
+    }
   </script>
   <link rel="stylesheet" href="backgrund.css">
   <link rel="stylesheet" href="contenthome.css">
